@@ -42,64 +42,64 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-brand-black/60 via-transparent to-brand-black/60 z-10" />
       
       <div className="container-custom relative z-20 text-center">
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-6xl mx-auto space-y-16">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold leading-tight animate-fade-in">
             Resolva seus Desafios Jurídicos e Empresariais{' '}
-            <span className="text-gradient block mt-4">Mais Complexos</span>
-            <span className="block mt-4 text-4xl md:text-5xl lg:text-6xl">
+            <span className="text-gradient block mt-6">Mais Complexos</span>
+            <span className="block mt-6 text-4xl md:text-5xl lg:text-6xl">
               Com Risco Zero.
             </span>
           </h1>
           
           <p className="text-2xl md:text-3xl text-brand-white/90 max-w-4xl mx-auto leading-relaxed animate-slide-in-left">
             Compromisso, transparência e excelência para seus desafios. 
-            <span className="text-brand-gold font-semibold block mt-2">
+            <span className="text-brand-gold font-semibold block mt-4">
               Você só paga se tiver sucesso.
             </span>
           </p>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-8 my-12 animate-slide-in-right">
-            <div className="flex items-center space-x-3 glass-card px-6 py-3 rounded-2xl">
-              <Shield className="text-brand-gold" size={24} />
-              <span className="text-brand-white font-medium">Risco Zero</span>
+          <div className="flex flex-wrap justify-center gap-8 my-16 animate-slide-in-right">
+            <div className="flex items-center space-x-4 glass-card px-8 py-4 rounded-3xl">
+              <Shield className="text-brand-gold" size={28} />
+              <span className="text-brand-white font-medium text-lg">Risco Zero</span>
             </div>
-            <div className="flex items-center space-x-3 glass-card px-6 py-3 rounded-2xl">
-              <Target className="text-brand-gold" size={24} />
-              <span className="text-brand-white font-medium">100% Focado em Resultados</span>
+            <div className="flex items-center space-x-4 glass-card px-8 py-4 rounded-3xl">
+              <Target className="text-brand-gold" size={28} />
+              <span className="text-brand-white font-medium text-lg">100% Focado em Resultados</span>
             </div>
-            <div className="flex items-center space-x-3 glass-card px-6 py-3 rounded-2xl">
-              <Clock className="text-brand-gold" size={24} />
-              <span className="text-brand-white font-medium">Resposta em 24h</span>
+            <div className="flex items-center space-x-4 glass-card px-8 py-4 rounded-3xl">
+              <Clock className="text-brand-gold" size={28} />
+              <span className="text-brand-white font-medium text-lg">Resposta em 24h</span>
             </div>
           </div>
           
-          <div className="pt-8 animate-scale-in">
+          <div className="pt-12 animate-scale-in">
             <a
               href="/contato"
-              className="brand-button text-xl px-12 py-6 inline-block shadow-premium relative overflow-hidden group"
+              className="brand-button text-xl px-16 py-8 inline-block shadow-premium relative overflow-hidden group"
             >
               <span className="relative z-10">Quero minha Análise GRATUITA</span>
               <div className="absolute inset-0 bg-gradient-to-r from-brand-gold-light to-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
-            <p className="text-brand-white/60 mt-4 text-lg">
+            <p className="text-brand-white/60 mt-6 text-lg">
               ⏰ Análise estratégica sem custo • Sem compromisso
             </p>
           </div>
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float z-20">
-        <ArrowDown className="text-brand-gold" size={36} />
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-float z-20">
+        <ArrowDown className="text-brand-gold" size={40} />
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-4 h-4 rounded-full transition-all duration-300 ${
               index === currentSlide ? 'bg-brand-gold' : 'bg-brand-white/30'
             }`}
           />

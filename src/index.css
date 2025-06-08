@@ -34,7 +34,7 @@
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 42 29% 59%;
-    --radius: 12px;
+    --radius: 16px;
   }
 }
 
@@ -45,36 +45,39 @@
 
   body {
     @apply bg-brand-black text-brand-white font-montserrat antialiased;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-playfair text-brand-gold;
+    line-height: 1.3;
   }
 
   p, li, span {
     @apply text-brand-white;
+    line-height: 1.8;
   }
 }
 
 @layer components {
   .brand-button {
-    @apply bg-brand-gold text-brand-black font-semibold px-8 py-4 rounded-xl
+    @apply bg-brand-gold text-brand-black font-semibold px-10 py-5 rounded-2xl
            transition-all duration-300 hover:bg-brand-gold-light 
            hover:shadow-gold hover:scale-105 transform;
   }
 
   .brand-button-outline {
-    @apply border-2 border-brand-gold text-brand-gold font-semibold px-8 py-4 rounded-xl
+    @apply border-2 border-brand-gold text-brand-gold font-semibold px-10 py-5 rounded-2xl
            transition-all duration-300 hover:bg-brand-gold hover:text-brand-black
            hover:shadow-gold hover:scale-105 transform;
   }
 
   .section-spacing {
-    @apply py-20 md:py-32;
+    @apply py-24 md:py-40;
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
   }
 
   .text-gradient {
@@ -83,13 +86,14 @@
 
   .card-hover {
     @apply transition-all duration-500 hover:transform hover:scale-105 hover:shadow-premium
-           rounded-2xl backdrop-blur-sm;
+           rounded-3xl backdrop-blur-sm;
   }
 
   .card-premium {
     @apply bg-gradient-to-br from-brand-gray/80 to-brand-black/90 
-           backdrop-blur-md border border-brand-gold/20 rounded-2xl
-           shadow-luxury hover:shadow-premium transition-all duration-500;
+           backdrop-blur-md border border-brand-gold/20 rounded-3xl
+           shadow-luxury hover:shadow-premium transition-all duration-500
+           p-8 md:p-12;
   }
 
   .hero-gradient {
@@ -97,12 +101,12 @@
   }
 
   .scarcity-badge {
-    @apply bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold
+    @apply bg-red-600 text-white px-6 py-3 rounded-full text-sm font-bold
            animate-pulse-gold shadow-lg;
   }
 
   .luxury-divider {
-    @apply h-px bg-gradient-to-r from-transparent via-brand-gold to-transparent;
+    @apply h-px bg-gradient-to-r from-transparent via-brand-gold to-transparent my-16;
   }
 }
 
@@ -111,6 +115,8 @@
   background: rgba(51, 51, 51, 0.3);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(197, 165, 106, 0.2);
+  border-radius: 24px;
+  padding: 2rem;
 }
 
 /* Premium Scrollbar */
