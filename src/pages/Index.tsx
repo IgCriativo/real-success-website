@@ -1,11 +1,10 @@
-
 import { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import BlogSection from '../components/BlogSection';
 import TestimonialsSlider from '../components/TestimonialsSlider';
-import { Target, Users, Award, TrendingUp, ArrowRight, Clock, CheckCircle } from 'lucide-react';
+import { Target, Users, Award, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
 
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -33,34 +32,6 @@ const Index = () => {
       <Header />
       
       <HeroSection />
-
-      {/* Urgência e Escassez */}
-      <section className="py-16 bg-gradient-to-r from-red-900/20 to-brand-black border-t border-red-500/30">
-        <div className="container-custom">
-          <div className="glass-card p-8 rounded-3xl text-center">
-            <div className="flex items-center justify-center space-x-4 mb-6">
-              <Clock className="text-red-400 animate-pulse" size={32} />
-              <h3 className="text-2xl md:text-3xl font-playfair font-bold text-red-400">
-                ⚠️ ATENÇÃO: Oferta por Tempo Limitado
-              </h3>
-            </div>
-            <p className="text-xl text-brand-white/90 mb-6">
-              Estamos aceitando apenas <span className="text-brand-gold font-bold">5 novos casos por mês</span> 
-              para garantir atendimento exclusivo e resultados excepcionais.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center space-x-2 bg-green-900/30 px-4 py-2 rounded-full">
-                <CheckCircle className="text-green-400" size={16} />
-                <span className="text-green-400">3 vagas restantes em Dezembro</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-yellow-900/30 px-4 py-2 rounded-full">
-                <Clock className="text-yellow-400" size={16} />
-                <span className="text-yellow-400">Resposta em 24h garantida</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Diferenciais */}
       <section className="section-spacing bg-brand-black fade-on-scroll">

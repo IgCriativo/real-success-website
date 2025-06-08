@@ -43,13 +43,6 @@ const HeroSection = () => {
       
       <div className="container-custom relative z-20 text-center">
         <div className="max-w-6xl mx-auto space-y-12">
-          {/* Scarcity Badge */}
-          <div className="flex justify-center mb-8">
-            <div className="scarcity-badge">
-              🔥 VAGAS LIMITADAS - Apenas 5 casos por mês
-            </div>
-          </div>
-
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold leading-tight animate-fade-in">
             Resolva seus Desafios Jurídicos e Empresariais{' '}
             <span className="text-gradient block mt-4">Mais Complexos</span>
