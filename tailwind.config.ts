@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -75,9 +76,20 @@ export default {
 				'montserrat': ['Montserrat', 'sans-serif'],
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: '12px',
+				md: '8px',
+				sm: '6px',
+				'xl': '16px',
+				'2xl': '20px',
+				'3xl': '24px'
+			},
+			backdropBlur: {
+				'xs': '2px',
+			},
+			boxShadow: {
+				'premium': '0 25px 50px -12px rgba(197, 165, 106, 0.25)',
+				'gold': '0 10px 25px -5px rgba(197, 165, 106, 0.3)',
+				'luxury': '0 20px 60px -15px rgba(0, 0, 0, 0.7)',
 			},
 			keyframes: {
 				'fade-in': {
@@ -95,6 +107,14 @@ export default {
 				'scale-in': {
 					'0%': { opacity: '0', transform: 'scale(0.95)' },
 					'100%': { opacity: '1', transform: 'scale(1)' }
+				},
+				'pulse-gold': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				},
 				'accordion-down': {
 					from: {
@@ -118,6 +138,8 @@ export default {
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
+				'pulse-gold': 'pulse-gold 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}

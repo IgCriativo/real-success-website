@@ -34,7 +34,7 @@
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 42 29% 59%;
-    --radius: 6px;
+    --radius: 12px;
   }
 }
 
@@ -44,7 +44,7 @@
   }
 
   body {
-    @apply bg-brand-black text-brand-white font-montserrat;
+    @apply bg-brand-black text-brand-white font-montserrat antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -58,19 +58,19 @@
 
 @layer components {
   .brand-button {
-    @apply bg-brand-gold text-brand-black font-semibold px-6 py-3 rounded-md 
+    @apply bg-brand-gold text-brand-black font-semibold px-8 py-4 rounded-xl
            transition-all duration-300 hover:bg-brand-gold-light 
-           hover:shadow-lg hover:scale-105;
+           hover:shadow-gold hover:scale-105 transform;
   }
 
   .brand-button-outline {
-    @apply border-2 border-brand-gold text-brand-gold font-semibold px-6 py-3 rounded-md
+    @apply border-2 border-brand-gold text-brand-gold font-semibold px-8 py-4 rounded-xl
            transition-all duration-300 hover:bg-brand-gold hover:text-brand-black
-           hover:shadow-lg hover:scale-105;
+           hover:shadow-gold hover:scale-105 transform;
   }
 
   .section-spacing {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-32;
   }
 
   .container-custom {
@@ -78,26 +78,55 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-brand-gold to-brand-gold-light bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-gold bg-clip-text text-transparent;
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl;
+    @apply transition-all duration-500 hover:transform hover:scale-105 hover:shadow-premium
+           rounded-2xl backdrop-blur-sm;
+  }
+
+  .card-premium {
+    @apply bg-gradient-to-br from-brand-gray/80 to-brand-black/90 
+           backdrop-blur-md border border-brand-gold/20 rounded-2xl
+           shadow-luxury hover:shadow-premium transition-all duration-500;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-br from-brand-black via-brand-gray/50 to-brand-black;
+  }
+
+  .scarcity-badge {
+    @apply bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold
+           animate-pulse-gold shadow-lg;
+  }
+
+  .luxury-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-brand-gold to-transparent;
   }
 }
 
-/* Custom Scrollbar */
+/* Premium Glass Effects */
+.glass-card {
+  background: rgba(51, 51, 51, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(197, 165, 106, 0.2);
+}
+
+/* Premium Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--brand-black);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--brand-gold);
-  border-radius: 4px;
+  background: linear-gradient(45deg, var(--brand-gold), var(--brand-gold-light));
+  border-radius: 6px;
+  border: 2px solid var(--brand-black);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -113,4 +142,21 @@ html {
 ::selection {
   background: var(--brand-gold);
   color: var(--brand-black);
+}
+
+/* Premium animations */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(197, 165, 106, 0.2), transparent);
+  animation: shimmer 2s infinite;
 }
