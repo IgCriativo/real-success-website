@@ -1,0 +1,1646 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL Consultoria Empresarial & Jurídica - Consultoria com Êxito Garantido | Risco Zero</title>
+    <meta name="description" content="Consultoria empresarial e jurídica de alto nível com modelo único baseado em êxito. Você só paga se obtivermos resultados. Resolva desafios complexos com risco zero. Análise gratuita." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset e Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000000;
+            color: #F5F5F5;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #C5A56A;
+            line-height: 1.2;
+        }
+        
+        /* Brand Colors */
+        :root {
+            --brand-black: #000000;
+            --brand-gold: #C5A56A;
+            --brand-gold-light: #EADCA6;
+            --brand-white: #F5F5F5;
+            --brand-gray: #333333;
+        }
+        
+        /* Utilities */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(to right, var(--brand-gold), var(--brand-gold-light), var(--brand-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-card {
+            background: rgba(51, 51, 51, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 165, 106, 0.2);
+            border-radius: 24px;
+        }
+        
+        .card-premium {
+            background: linear-gradient(135deg, rgba(51,51,51,0.8) 0%, rgba(0,0,0,0.9) 100%);
+            backdrop-filter: blur(13px);
+            border: 1px solid rgba(197,165,106,0.2);
+            border-radius: 32px;
+            box-shadow: 0 20px 60px -15px rgba(0,0,0,0.7);
+            transition: all 0.5s;
+        }
+        
+        .card-premium:hover {
+            transform: scale(1.02);
+        }
+        
+        .brand-button {
+            background: var(--brand-gold);
+            color: var(--brand-black);
+            font-weight: 600;
+            padding: 24px 48px;
+            border-radius: 24px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 25px 50px -12px rgba(197,165,106,0.25);
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .brand-button:hover {
+            background: var(--brand-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 35px 60px -12px rgba(197,165,106,0.35);
+        }
+        
+        .brand-button-outline {
+            border: 2px solid var(--brand-gold);
+            color: var(--brand-gold);
+            background: transparent;
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 16px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+        }
+        
+        .brand-button-outline:hover {
+            background: var(--brand-gold);
+            color: var(--brand-black);
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+        
+        .logo {
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--brand-gold);
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: var(--brand-white);
+            margin-top: -4px;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        .nav a {
+            color: var(--brand-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: var(--brand-gold);
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            transition: opacity 1s;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, transparent 50%, rgba(0,0,0,0.6) 100%);
+            z-index: 10;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 20;
+            text-align: center;
+            max-width: 1152px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 80px);
+            font-weight: 700;
+            margin-bottom: 32px;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero p {
+            font-size: clamp(18px, 3vw, 24px);
+            color: rgba(245,245,245,0.9);
+            margin-bottom: 48px;
+            animation: slideInLeft 1s ease-out 0.2s both;
+        }
+        
+        .trust-indicators {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin: 64px 0;
+            animation: slideInRight 1s ease-out 0.4s both;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 32px;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 96px 0 160px;
+        }
+        
+        .section-title {
+            font-size: clamp(36px, 6vw, 64px);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: rgba(245,245,245,0.8);
+            text-align: center;
+            max-width: 768px;
+            margin: 0 auto 96px;
+            line-height: 1.6;
+        }
+        
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 40px;
+        }
+        
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 80px;
+        }
+        
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 64px;
+        }
+        
+        /* Cards */
+        .feature-card {
+            text-align: center;
+            padding: 48px;
+        }
+        
+        .feature-icon {
+            margin-bottom: 32px;
+            color: var(--brand-gold);
+        }
+        
+        .feature-badge {
+            background: rgba(197,165,106,0.2);
+            color: var(--brand-gold);
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--brand-gold);
+        }
+        
+        .feature-description {
+            color: rgba(245,245,245,0.8);
+            line-height: 1.6;
+        }
+        
+        /* Service Cards */
+        .service-card {
+            overflow: hidden;
+            padding: 48px;
+        }
+        
+        .service-image {
+            position: relative;
+            height: 288px;
+            margin-bottom: 32px;
+            overflow: hidden;
+            border-radius: 24px;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            border-radius: 24px;
+        }
+        
+        .service-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            background: var(--brand-gold);
+            color: var(--brand-black);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+            width: fit-content;
+        }
+        
+        .service-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        .service-title {
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--brand-gold);
+        }
+        
+        .service-description {
+            color: rgba(245,245,245,0.8);
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            color: rgba(245,245,245,0.7);
+            list-style: none;
+        }
+        
+        .service-list li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .check-icon {
+            color: var(--brand-gold);
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+        
+        /* Process Cards */
+        .process-card {
+            position: relative;
+            padding: 48px;
+            overflow: hidden;
+        }
+        
+        .process-image {
+            position: relative;
+            height: 224px;
+            margin-bottom: 32px;
+            overflow: hidden;
+            border-radius: 24px;
+        }
+        
+        .process-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .process-card:hover .process-image img {
+            transform: scale(1.1);
+        }
+        
+        .process-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            border-radius: 24px;
+        }
+        
+        .process-number {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 60px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: rgba(197,165,106,0.4);
+        }
+        
+        .process-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .process-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--brand-gold);
+        }
+        
+        .process-description {
+            color: rgba(245,245,245,0.8);
+            line-height: 1.6;
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            position: relative;
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 48px;
+            text-align: center;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            color: rgba(197,165,106,0.3);
+            width: 48px;
+            height: 48px;
+        }
+        
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            border: 3px solid rgba(197,165,106,0.3);
+        }
+        
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+            gap: 4px;
+        }
+        
+        .star {
+            color: var(--brand-gold);
+            width: 20px;
+            height: 20px;
+        }
+        
+        .testimonial-quote {
+            font-size: 24px;
+            color: rgba(245,245,245,0.9);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            color: var(--brand-gold);
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        
+        .testimonial-role {
+            color: rgba(245,245,245,0.7);
+            margin-top: 8px;
+        }
+        
+        .testimonial-result {
+            background: rgba(197,165,106,0.2);
+            color: var(--brand-gold);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 16px;
+            display: inline-block;
+        }
+        
+        /* Blog Section */
+        .blog-article {
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        
+        .blog-article:hover {
+            transform: scale(1.02);
+        }
+        
+        .blog-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 192px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .blog-article:hover .blog-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-category {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--brand-gold);
+            color: var(--brand-black);
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .blog-content {
+            padding: 24px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: rgba(245,245,245,0.6);
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .blog-meta-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .blog-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--brand-gold);
+        }
+        
+        .blog-excerpt {
+            color: rgba(245,245,245,0.8);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .blog-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .blog-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--brand-gold);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .blog-read-time {
+            color: rgba(245,245,245,0.4);
+            font-size: 12px;
+        }
+        
+        /* CTA Section */
+        .cta-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .cta-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .cta-stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--brand-gold);
+        }
+        
+        .cta-stat-label {
+            color: rgba(245,245,245,0.7);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--brand-gray);
+            padding: 48px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--brand-gold);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .footer-links a {
+            color: rgba(245,245,245,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--brand-gold);
+        }
+        
+        .footer-description {
+            color: rgba(245,245,245,0.8);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .footer-contact {
+            font-size: 14px;
+        }
+        
+        .footer-contact p {
+            color: rgba(245,245,245,0.8);
+            margin-bottom: 8px;
+        }
+        
+        .footer-contact a {
+            color: rgba(245,245,245,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-contact a:hover {
+            color: var(--brand-gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(245,245,245,0.2);
+            padding-top: 32px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: rgba(245,245,245,0.6);
+            font-size: 14px;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        .whatsapp-icon {
+            width: 32px;
+            height: 32px;
+            color: white;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0px);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--brand-white);
+                font-size: 24px;
+                cursor: pointer;
+            }
+            
+            .section {
+                padding: 64px 0 96px;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .service-image {
+                height: 200px;
+            }
+            
+            .process-image {
+                height: 180px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .cta-stats {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .feature-card,
+            .service-card,
+            .process-card {
+                padding: 32px;
+            }
+            
+            .brand-button {
+                padding: 20px 32px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-text">REAL</div>
+                    <div class="logo-subtitle">Consultoria Empresarial & Jurídica</div>
+                </a>
+                
+                <nav class="nav">
+                    <a href="#home">Home</a>
+                    <a href="#sobre">Sobre Nós</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#cases">Cases de Sucesso</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+                
+                <div>
+                    <a href="#contato" class="brand-button">Quero minha Análise</a>
+                </div>
+                
+                <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Resolva seus Desafios Jurídicos e Empresariais
+                    <span class="text-gradient">Mais Complexos</span>
+                    <span style="display: block; margin-top: 24px;">Com Risco Zero.</span>
+                </h1>
+                
+                <p>
+                    Compromisso, transparência e excelência para seus desafios.
+                    <span style="color: var(--brand-gold); font-weight: 600; display: block; margin-top: 16px;">
+                        Você só paga se tiver sucesso.
+                    </span>
+                </p>
+
+                <div class="trust-indicators">
+                    <div class="trust-item glass-card">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--brand-gold);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                        <span style="font-weight: 500; font-size: 18px;">Risco Zero</span>
+                    </div>
+                    <div class="trust-item glass-card">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--brand-gold);">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                        <span style="font-weight: 500; font-size: 18px;">100% Focado em Resultados</span>
+                    </div>
+                    <div class="trust-item glass-card">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--brand-gold);">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                        <span style="font-weight: 500; font-size: 18px;">Resposta em 24h</span>
+                    </div>
+                </div>
+                
+                <div style="padding-top: 48px;">
+                    <a href="#contato" class="brand-button" style="font-size: 20px; padding: 32px 64px;">
+                        Quero minha Análise GRATUITA
+                    </a>
+                    <p style="color: rgba(245,245,245,0.6); margin-top: 24px; font-size: 18px;">
+                        ⏰ Análise estratégica sem custo • Sem compromisso
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--brand-gold);">
+                <polyline points="6,9 12,15 18,9"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Diferenciais Section -->
+    <section class="section" style="background: var(--brand-black);">
+        <div class="container">
+            <h2 class="section-title">A Parceria que Sua Empresa Realmente Precisa</h2>
+            <p class="section-subtitle">
+                Descubra por que empresários escolhem nosso modelo único de consultoria
+            </p>
+            
+            <div class="grid grid-4">
+                <div class="card-premium feature-card">
+                    <div class="feature-icon">
+                        <svg width="52" height="52" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="feature-badge">Risco Zero</div>
+                    <h3 class="feature-title">Modelo de Êxito Garantido</h3>
+                    <p class="feature-description">
+                        Você só paga pelo resultado alcançado. Seu sucesso é literalmente o nosso sucesso.
+                    </p>
+                </div>
+
+                <div class="card-premium feature-card">
+                    <div class="feature-icon">
+                        <svg width="52" height="52" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="m22 21-3-3m0 0-3-3m3 3 3-3m-3 3-3 3"/>
+                        </svg>
+                    </div>
+                    <div class="feature-badge">Sócios Envolvidos</div>
+                    <h3 class="feature-title">Compromisso Total</h3>
+                    <p class="feature-description">
+                        Envolvimento direto dos sócios no seu caso para garantir agilidade e decisões assertivas.
+                    </p>
+                </div>
+
+                <div class="card-premium feature-card">
+                    <div class="feature-icon">
+                        <svg width="52" height="52" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="6" cy="6" r="3"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+                            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+                            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="feature-badge">100% Transparente</div>
+                    <h3 class="feature-title">Transparência Absoluta</h3>
+                    <p class="feature-description">
+                        Comunicação clara e honesta do início ao fim do processo. Sem surpresas ou custos ocultos.
+                    </p>
+                </div>
+
+                <div class="card-premium feature-card">
+                    <div class="feature-icon">
+                        <svg width="52" height="52" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                        </svg>
+                    </div>
+                    <div class="feature-badge">Estratégia Única</div>
+                    <h3 class="feature-title">Soluções Sob Medida</h3>
+                    <p class="feature-description">
+                        Não usamos fórmulas prontas. Mergulhamos no seu desafio para construir a estratégia vencedora.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="section" style="background: var(--brand-gray);">
+        <div class="container">
+            <h2 class="section-title">Nossa Expertise ao seu Dispor</h2>
+            <p class="section-subtitle">
+                Soluções completas para seus desafios empresariais e jurídicos mais complexos
+            </p>
+            
+            <div class="grid grid-2">
+                <div class="card-premium service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultoria Empresarial">
+                        <div class="service-overlay"></div>
+                        <div class="service-badge">Consultoria Empresarial</div>
+                    </div>
+                    
+                    <div class="service-content">
+                        <h3 class="service-title">Transformação Empresarial</h3>
+                        <p class="service-description">
+                            Reestruturação organizacional, planejamento estratégico, gestão de crises 
+                            e soluções personalizadas para aumentar a eficiência e lucratividade do seu negócio.
+                        </p>
+                        <ul class="service-list">
+                            <li>
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Reestruturação organizacional completa</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Planejamento estratégico de longo prazo</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Gestão de crises e recuperação</span>
+                            </li>
+                        </ul>
+                        <a href="#contato" class="brand-button-outline">
+                            <span>Saiba Mais</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <polyline points="9,18 15,12 9,6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card-premium service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultoria Jurídica">
+                        <div class="service-overlay"></div>
+                        <div class="service-badge">Consultoria Jurídica</div>
+                    </div>
+                    
+                    <div class="service-content">
+                        <h3 class="service-title">Proteção Jurídica Estratégica</h3>
+                        <p class="service-description">
+                            Direito empresarial, societário, contencioso estratégico e assessoria 
+                            jurídica especializada para proteger e impulsionar seus negócios.
+                        </p>
+                        <ul class="service-list">
+                            <li>
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Direito empresarial e societário</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Contencioso estratégico</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Recuperação de créditos</span>
+                            </li>
+                        </ul>
+                        <a href="#contato" class="brand-button-outline">
+                            <span>Saiba Mais</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <polyline points="9,18 15,12 9,6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processo Section -->
+    <section class="section" style="background: var(--brand-black);">
+        <div class="container">
+            <h2 class="section-title">Como Funciona o Modelo Baseado em Êxito?</h2>
+            <p class="section-subtitle">
+                Um processo transparente e estruturado para garantir os melhores resultados
+            </p>
+            
+            <div class="grid grid-3">
+                <div class="card-premium process-card">
+                    <div class="process-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Análise Estratégica">
+                        <div class="process-overlay"></div>
+                        <div class="process-number">01</div>
+                    </div>
+                    
+                    <div class="process-content">
+                        <h3 class="process-title">Análise Estratégica</h3>
+                        <p class="process-description">
+                            Mergulhamos fundo no seu caso para definir as metas e o caminho para a vitória. Análise completa sem custo para você.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-premium process-card">
+                    <div class="process-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Execução Focada">
+                        <div class="process-overlay"></div>
+                        <div class="process-number">02</div>
+                    </div>
+                    
+                    <div class="process-content">
+                        <h3 class="process-title">Execução Focada</h3>
+                        <p class="process-description">
+                            Implementamos o plano com agilidade e mantemos você informado em cada etapa. Transparência total durante todo o processo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-premium process-card">
+                    <div class="process-image">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Resultado e Êxito">
+                        <div class="process-overlay"></div>
+                        <div class="process-number">03</div>
+                    </div>
+                    
+                    <div class="process-content">
+                        <h3 class="process-title">Resultado e Êxito</h3>
+                        <p class="process-description">
+                            Alcançamos o objetivo definido e celebramos juntos. É aqui que nossa parceria é remunerada pelo sucesso obtido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="cases" class="section" style="background: var(--brand-black); position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(197,165,106,0.05), transparent);"></div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
+            <h2 class="section-title">O que Nossos Clientes Dizem</h2>
+            <p class="section-subtitle">Histórias reais de transformação e sucesso</p>
+
+            <div class="testimonial glass-card">
+                <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+                
+                <div>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ricardo Silva" class="testimonial-image">
+                    <div class="stars">
+                        <svg class="star" fill="currentColor" viewBox="0 0 24 24">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="star" fill="currentColor" viewBox="0 0 24 24">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="star" fill="currentColor" viewBox="0 0 24 24">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="star" fill="currentColor" viewBox="0 0 24 24">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="star" fill="currentColor" viewBox="0 0 24 24">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                    </div>
+
+                    <blockquote class="testimonial-quote">
+                        "A REAL Consultoria salvou nossa empresa de uma crise que parecia sem solução. O modelo de pagamento por êxito nos deu confiança total no processo."
+                    </blockquote>
+
+                    <div>
+                        <h4 class="testimonial-author">Ricardo Silva</h4>
+                        <p class="testimonial-role">CEO - Indústria Metalúrgica</p>
+                        <div class="testimonial-result">Economia de R$ 1.2M em reestruturação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section" style="background: var(--brand-gray);">
+        <div class="container">
+            <h2 class="section-title">Insights Estratégicos</h2>
+            <p class="section-subtitle">
+                Conhecimento prático e estratégias comprovadas para resolver desafios empresariais complexos
+            </p>
+            
+            <div class="grid grid-3">
+                <article class="card-premium blog-article">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Como Identificar se Sua Empresa Precisa de Reestruturação Urgente">
+                        <div class="blog-category">Estratégia</div>
+                    </div>
+                    
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="blog-meta-left">
+                                <div class="blog-meta-item">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>15 Nov 2024</span>
+                                </div>
+                                <div class="blog-meta-item">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    <span>Pedro Paulo</span>
+                                </div>
+                            </div>
+                            <div class="blog-meta-item">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <span>1.547</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="blog-title">Como Identificar se Sua Empresa Precisa de Reestruturação Urgente</h3>
+                        
+                        <p class="blog-excerpt">
+                            Sinais claros que indicam a necessidade de intervenção estratégica imediata para evitar maiores prejuízos.
+                        </p>
+                        
+                        <div class="blog-footer">
+                            <a href="#" class="blog-link">
+                                <span>Ler Artigo</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <polyline points="9,18 15,12 9,6"/>
+                                </svg>
+                            </a>
+                            
+                            <div class="blog-read-time">5 min de leitura</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-premium blog-article">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modelo de Pagamento por Êxito: Por que Funciona Melhor">
+                        <div class="blog-category">Negócios</div>
+                    </div>
+                    
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="blog-meta-left">
+                                <div class="blog-meta-item">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>10 Nov 2024</span>
+                                </div>
+                                <div class="blog-meta-item">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    <span>João Pedro</span>
+                                </div>
+                            </div>
+                            <div class="blog-meta-item">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <span>2.103</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="blog-title">Modelo de Pagamento por Êxito: Por que Funciona Melhor</h3>
+                        
+                        <p class="blog-excerpt">
+                            Descubra por que o modelo baseado em resultados alinha os interesses do cliente e consultor de forma única.
+                        </p>
+                        
+                        <div class="blog-footer">
+                            <a href="#" class="blog-link">
+                                <span>Ler Artigo</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <polyline points="9,18 15,12 9,6"/>
+                                </svg>
+                            </a>
+                            
+                            <div class="blog-read-time">5 min de leitura</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-premium blog-article">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Os 5 Erros Jurídicos Mais Caros que Empresas Cometem">
+                        <div class="blog-category">Jurídico</div>
+                    </div>
+                    
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="blog-meta-left">
+                                <div class="blog-meta-item">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>05 Nov 2024</span>
+                                </div>
+                                <div class="blog-meta-item">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    <span>Pedro Paulo</span>
+                                </div>
+                            </div>
+                            <div class="blog-meta-item">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <span>3.256</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="blog-title">Os 5 Erros Jurídicos Mais Caros que Empresas Cometem</h3>
+                        
+                        <p class="blog-excerpt">
+                            Evite prejuízos milionários conhecendo os erros mais comuns em contratos e estruturação societária.
+                        </p>
+                        
+                        <div class="blog-footer">
+                            <a href="#" class="blog-link">
+                                <span>Ler Artigo</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <polyline points="9,18 15,12 9,6"/>
+                                </svg>
+                            </a>
+                            
+                            <div class="blog-read-time">5 min de leitura</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="#" class="brand-button-outline">
+                    <span>Ver Todos os Artigos</span>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <polyline points="9,18 15,12 9,6"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final Section -->
+    <section id="contato" class="section" style="background: linear-gradient(135deg, var(--brand-gray) 0%, var(--brand-black) 100%);">
+        <div class="container" style="text-align: center;">
+            <div style="max-width: 768px; margin: 0 auto;">
+                <h2 class="section-title">
+                    Pronto para Resolver Desafios Complexos com um
+                    <span class="text-gradient">Parceiro de Verdade</span>?
+                </h2>
+                <p class="section-subtitle">
+                    Não deixe seus problemas empresariais e jurídicos sem solução. 
+                    Agende sua análise estratégica gratuita e descubra como podemos ajudar.
+                </p>
+                
+                <div class="glass-card cta-stats" style="padding: 32px; margin-bottom: 64px;">
+                    <div class="cta-stat">
+                        <div class="cta-stat-number">100%</div>
+                        <div class="cta-stat-label">Focado em Resultados</div>
+                    </div>
+                    <div class="cta-stat">
+                        <div class="cta-stat-number">24h</div>
+                        <div class="cta-stat-label">Resposta Garantida</div>
+                    </div>
+                    <div class="cta-stat">
+                        <div class="cta-stat-number">0</div>
+                        <div class="cta-stat-label">Custo Inicial</div>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/5511974517180?text=Olá!%20Vi%20o%20site%20da%20REAL%20Consultoria%20e%20gostaria%20de%20agendar%20uma%20análise." target="_blank" class="brand-button" style="font-size: 24px; padding: 32px 64px;">
+                    Agendar Análise Estratégica GRATUITA
+                </a>
+                <p style="color: rgba(245,245,245,0.6); margin-top: 32px; font-size: 18px;">
+                    🔒 Atendimento confidencial • 📞 Sem compromisso • ⏰ Vagas limitadas
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div>
+                        <div class="logo-text">REAL</div>
+                        <div class="logo-subtitle">Consultoria Empresarial & Jurídica</div>
+                    </div>
+                    <p class="footer-description">
+                        Soluções empresariais e jurídicas de alto nível com modelo único baseado em êxito. 
+                        Compromisso, transparência e resultados garantidos para seus desafios mais complexos.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#sobre">Sobre Nós</a>
+                        <a href="#servicos">Serviços</a>
+                        <a href="#cases">Cases de Sucesso</a>
+                        <a href="#contato">Contato</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="footer-contact">
+                        <p>
+                            Rua São Benedito, 569 - Sala 01<br>
+                            Centro - Caraguatatuba/SP<br>
+                            CEP 11660-100
+                        </p>
+                        <div>
+                            <p>
+                                <span style="color: var(--brand-gold);">Pedro Paulo:</span>
+                                <a href="tel:+5511974517180">(11) 97451-7180</a>
+                            </p>
+                            <p>
+                                <span style="color: var(--brand-gold);">João Pedro:</span>
+                                <a href="tel:+5512996351708">(12) 99635-1708</a>
+                            </p>
+                            <p>
+                                <span style="color: var(--brand-gold);">E-mail:</span>
+                                <a href="mailto:realconsultoria.e.j@gmail.com">realconsultoria.e.j@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 REAL Consultoria Empresarial & Jurídica. Todos os direitos reservados.</p>
+                <p style="margin-top: 4px; font-size: 12px;">CNPJ: XX.XXX.XXX/XXXX-XX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511974517180?text=Olá!%20Vi%20o%20site%20da%20REAL%20Consultoria%20e%20gostaria%20de%20agendar%20uma%20análise." target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+        <svg class="whatsapp-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.486"/>
+        </svg>
+    </a>
+
+    <script>
+        // Hero background carousel
+        const heroImages = [
+            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+            'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+            'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'
+        ];
+        
+        let currentImageIndex = 0;
+        const heroBg = document.getElementById('heroBg');
+        
+        function changeHeroBackground() {
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            const newImage = heroImages[currentImageIndex];
+            heroBg.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('${newImage}')`;
+        }
+        
+        // Change background every 5 seconds
+        setInterval(changeHeroBackground, 5000);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0,0,0,0.98)';
+            } else {
+                header.style.background = 'rgba(0,0,0,0.95)';
+            }
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Mobile menu toggle (placeholder for mobile menu functionality)
+        function toggleMobileMenu() {
+            // Add mobile menu functionality here if needed
+            console.log('Mobile menu toggle clicked');
+        }
+        
+        // Contact form handling (if needed)
+        function handleContact() {
+            const whatsappUrl = "https://wa.me/5511974517180?text=Olá!%20Vi%20o%20site%20da%20REAL%20Consultoria%20e%20gostaria%20de%20agendar%20uma%20análise.";
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Add click handlers for CTA buttons
+        document.querySelectorAll('.brand-button').forEach(button => {
+            if (!button.href) {
+                button.addEventListener('click', handleContact);
+            }
+        });
+    </script>
+</body>
+</html>
