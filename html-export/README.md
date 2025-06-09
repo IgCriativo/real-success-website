@@ -7,6 +7,7 @@ Este diretório contém o site completo da REAL Consultoria convertido para HTML
 
 - `index.html` - Página principal completa
 - `sobre.html` - Página sobre a empresa
+- `servicos.html` - Página de serviços detalhada
 - `contato.html` - Página de contato com formulário
 - `README.md` - Este arquivo de instruções
 
