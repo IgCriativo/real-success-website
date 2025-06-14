@@ -4,8 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REAL Consultoria Empresarial & Jurídica - Soluções com Risco Zero</title>
-    <meta name="description" content="Consultoria empresarial e jurídica com modelo único baseado em êxito. Você só paga se tiver sucesso. Análise estratégica gratuita." />
+    <title>REAL Consultoria Empresarial & Jurídica - Transforme Desafios em Soluções Estratégicas | Metodologia Exclusiva</title>
+    <meta name="description" content="Consultoria empresarial e jurídica especializada em transformar desafios complexos em soluções estratégicas. Metodologia exclusiva, resultados comprovados e ROI garantido. Análise gratuita personalizada." />
+    <meta name="keywords" content="consultoria empresarial, consultoria jurídica, estratégias personalizadas, transformação empresarial, soluções jurídicas, ROI empresarial, metodologia exclusiva, crescimento empresarial, São Paulo, Brasil" />
+    <meta name="author" content="REAL Consultoria Empresarial & Jurídica" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://realconsultoria.com.br/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://realconsultoria.com.br/" />
+    <meta property="og:title" content="REAL Consultoria - Transforme Desafios em Soluções Estratégicas" />
+    <meta property="og:description" content="Metodologia exclusiva para transformar desafios empresariais complexos em soluções estratégicas com ROI comprovado. Análise gratuita personalizada." />
+    <meta property="og:image" content="https://realconsultoria.com.br/og-image.jpg" />
+
+    <!-- Enhanced Business Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "REAL Consultoria Empresarial & Jurídica",
+      "description": "Consultoria empresarial e jurídica especializada em transformar desafios complexos em soluções estratégicas com metodologia exclusiva e resultados comprovados",
+      "url": "https://realconsultoria.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua São Benedito, 569 - Sala 01",
+        "addressLocality": "Caraguatatuba",
+        "addressRegion": "SP",
+        "postalCode": "11660-100",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-97451-7180",
+        "contactType": "customer service",
+        "email": "realconsultoria.e.j@gmail.com"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    }
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +92,6 @@
             padding: 0 48px;
         }
         
-        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -60,8 +100,11 @@
             z-index: 1000;
             background: rgba(0,0,0,0.95);
             backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: all 0.3s;
         }
         
         .header-content {
@@ -102,7 +145,7 @@
             transition: color 0.3s;
         }
         
-        .nav a:hover {
+        .nav a:hover, .nav a.active {
             color: var(--brand-gold);
         }
         
@@ -110,553 +153,240 @@
             background: var(--brand-gold);
             color: var(--brand-black);
             font-weight: 600;
-            padding: 20px 40px;
-            border-radius: 16px;
+            padding: 16px 32px;
+            border-radius: 12px;
             text-decoration: none;
             transition: all 0.3s;
             box-shadow: 0 10px 25px -5px rgba(197,165,106,0.3);
+            border: none;
+            cursor: pointer;
         }
         
         .brand-button:hover {
             background: var(--brand-gold-light);
             transform: translateY(-2px);
+            box-shadow: 0 15px 35px -5px rgba(197,165,106,0.4);
         }
         
-        /* Hero Section */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
-        }
-        
-        .hero-background {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
-                              url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, transparent 50%, rgba(0,0,0,0.6) 100%);
-            z-index: 10;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 20;
-            text-align: center;
-            max-width: 1152px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 64px;
-        }
-        
-        .hero-title {
-            font-size: clamp(48px, 8vw, 80px);
-            line-height: 1.1;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: #C5A56A;
-            animation: fadeIn 1s ease-out;
-        }
-        
-        .hero-title .gradient-text {
-            background: linear-gradient(to right, #C5A56A, #EADCA6, #C5A56A);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: block;
-            margin-top: 24px;
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(18px, 3vw, 24px);
-            color: rgba(245,245,245,0.9);
-            max-width: 768px;
-            margin: 0 auto;
-            line-height: 1.6;
-            animation: slideInLeft 1s ease-out;
-        }
-        
-        .hero-subtitle .highlight {
-            color: #C5A56A;
+        .brand-button-outline {
+            background: transparent;
+            color: var(--brand-gold);
             font-weight: 600;
-            display: block;
-            margin-top: 16px;
-        }
-        
-        .trust-indicators {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 32px;
-            margin: 64px 0;
-        }
-        
-        .trust-indicator {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: rgba(51,51,51,0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(197,165,106,0.2);
-            border-radius: 24px;
             padding: 16px 32px;
-        }
-        
-        .trust-indicator svg {
-            color: #C5A56A;
-            width: 28px;
-            height: 28px;
-        }
-        
-        .trust-indicator span {
-            color: #F5F5F5;
-            font-weight: 500;
-            font-size: 18px;
-        }
-        
-        .hero-cta {
-            padding-top: 48px;
-        }
-        
-        .hero-button {
-            background: #C5A56A;
-            color: #000000;
-            font-weight: 600;
-            padding: 32px 64px;
-            border-radius: 24px;
-            display: inline-block;
+            border: 2px solid var(--brand-gold);
+            border-radius: 12px;
             text-decoration: none;
-            font-size: 20px;
             transition: all 0.3s;
-            box-shadow: 0 25px 50px -12px rgba(197,165,106,0.25);
-            position: relative;
-            overflow: hidden;
+            cursor: pointer;
         }
         
-        .hero-button:hover {
-            background: #EADCA6;
+        .brand-button-outline:hover {
+            background: var(--brand-gold);
+            color: var(--brand-black);
             transform: translateY(-2px);
         }
         
-        .hero-disclaimer {
-            color: rgba(245,245,245,0.6);
-            margin-top: 24px;
-            font-size: 18px;
-        }
-        
-        .scroll-indicator {
-            position: absolute;
-            bottom: 48px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 20;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .scroll-indicator svg {
-            color: #C5A56A;
-            width: 40px;
-            height: 40px;
-        }
-        
-        /* Sections */
         .section {
-            padding: 96px 0 160px;
+            padding: 96px 0;
         }
         
         .section-title {
             font-size: clamp(36px, 6vw, 64px);
             text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .section-subtitle {
-            font-size: 20px;
-            color: rgba(245,245,245,0.8);
-            text-align: center;
-            max-width: 768px;
-            margin: 0 auto 96px;
-            line-height: 1.6;
-        }
-        
-        /* Diferenciais */
-        .diferenciais-section {
-            background: var(--brand-black);
-        }
-        
-        .diferenciais-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        .diferencial-card {
-            text-align: center;
-            background: linear-gradient(135deg, rgba(51,51,51,0.8) 0%, rgba(0,0,0,0.9) 100%);
-            backdrop-filter: blur(13px);
-            border: 1px solid rgba(197,165,106,0.2);
-            border-radius: 32px;
-            box-shadow: 0 20px 60px -15px rgba(0,0,0,0.7);
-            padding: 48px;
-            transition: all 0.5s;
-            cursor: pointer;
-        }
-        
-        .diferencial-card:hover {
-            transform: scale(1.02);
-        }
-        
-        .diferencial-icon {
             margin-bottom: 32px;
-            transform: scale(1);
-            transition: transform 0.3s;
         }
         
-        .diferencial-icon svg {
-            color: #C5A56A;
-            width: 52px;
-            height: 52px;
+        .text-gradient {
+            background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-card {
+            background: rgba(51, 51, 51, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 165, 106, 0.2);
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.5s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(197, 165, 106, 0.25);
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        
+        .hero-bg-image {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: all 2s ease;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.75), rgba(0,0,0,0.85));
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
-        .diferencial-badge {
-            background: rgba(197,165,106,0.2);
-            color: #C5A56A;
-            font-size: 14px;
-            padding: 8px 16px;
-            border-radius: 50px;
-            margin-bottom: 24px;
-            display: inline-block;
-        }
-        
-        .diferencial-title {
-            font-size: 20px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            margin-bottom: 24px;
-            color: #C5A56A;
-        }
-        
-        .diferencial-description {
-            color: rgba(245,245,245,0.8);
-            line-height: 1.6;
-        }
-        
-        /* Serviços */
-        .servicos-section {
+        .competitive-advantages {
             background: var(--brand-gray);
         }
         
-        .servicos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 80px;
-        }
-        
-        .servico-card {
-            background: linear-gradient(135deg, rgba(51,51,51,0.8) 0%, rgba(0,0,0,0.9) 100%);
-            backdrop-filter: blur(13px);
-            border: 1px solid rgba(197,165,106,0.2);
-            border-radius: 32px;
-            box-shadow: 0 20px 60px -15px rgba(0,0,0,0.7);
-            padding: 48px;
-            overflow: hidden;
-            transition: all 0.5s;
-            cursor: pointer;
-        }
-        
-        .servico-card:hover {
-            transform: scale(1.02);
-        }
-        
-        .servico-image {
-            position: relative;
-            height: 288px;
-            margin-bottom: 32px;
-            overflow: hidden;
-            border-radius: 24px;
-        }
-        
-        .servico-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .servico-card:hover .servico-image img {
-            transform: scale(1.05);
-        }
-        
-        .servico-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-            border-radius: 24px;
-        }
-        
-        .servico-badge {
-            position: absolute;
-            bottom: 24px;
-            left: 24px;
-            right: 24px;
-        }
-        
-        .servico-badge span {
-            background: #C5A56A;
-            color: #000000;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 700;
-        }
-        
-        .servico-content {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-        
-        .servico-title {
-            font-size: 30px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: #C5A56A;
-        }
-        
-        .servico-description {
-            color: rgba(245,245,245,0.8);
-            line-height: 1.6;
-            font-size: 18px;
-        }
-        
-        .servico-features {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            color: rgba(245,245,245,0.7);
-        }
-        
-        .servico-feature {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        
-        .servico-feature svg {
-            color: #C5A56A;
-            width: 24px;
-            height: 24px;
-            flex-shrink: 0;
-        }
-        
-        .servico-link {
-            border: 2px solid #C5A56A;
-            color: #C5A56A;
-            font-weight: 600;
-            padding: 16px 24px;
-            border-radius: 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            transition: all 0.3s;
-            align-self: flex-start;
-        }
-        
-        .servico-link:hover {
-            background: #C5A56A;
-            color: #000000;
-        }
-        
-        /* Processo */
-        .processo-section {
-            background: var(--brand-black);
-        }
-        
-        .processo-grid {
+        .advantage-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 64px;
+        }
+        
+        .advantage-card {
+            background: var(--brand-black);
+            padding: 48px 32px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid rgba(197, 165, 106, 0.2);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(197, 165, 106, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .advantage-card:hover::before {
+            left: 100%;
+        }
+        
+        .advantage-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(197, 165, 106, 0.3);
+        }
+        
+        .carousel-container {
+            background: var(--brand-black);
+            overflow: hidden;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-content {
+            display: flex;
+            align-items: center;
+            min-height: 500px;
             gap: 64px;
         }
         
-        .processo-card {
+        .stats-section {
+            background: var(--brand-gold);
             position: relative;
-            background: linear-gradient(135deg, rgba(51,51,51,0.8) 0%, rgba(0,0,0,0.9) 100%);
-            backdrop-filter: blur(13px);
-            border: 1px solid rgba(197,165,106,0.2);
-            border-radius: 32px;
-            box-shadow: 0 20px 60px -15px rgba(0,0,0,0.7);
-            padding: 48px;
-            overflow: hidden;
-            transition: all 0.5s;
-            cursor: pointer;
         }
         
-        .processo-card:hover {
-            transform: scale(1.02);
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
         }
         
-        .processo-image {
-            position: relative;
-            height: 224px;
-            margin-bottom: 32px;
-            overflow: hidden;
-            border-radius: 24px;
-        }
-        
-        .processo-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .processo-image-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            border-radius: 24px;
-        }
-        
-        .processo-number {
-            position: absolute;
-            top: 24px;
-            right: 24px;
-            font-size: 60px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: rgba(197,165,106,0.4);
-        }
-        
-        .processo-content {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        
-        .processo-title {
-            font-size: 24px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            color: #C5A56A;
-        }
-        
-        .processo-description {
-            color: rgba(245,245,245,0.8);
-            line-height: 1.6;
-        }
-        
-        /* Depoimentos */
-        .depoimentos-section {
-            background: var(--brand-black);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .depoimentos-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, rgba(197,165,106,0.05), transparent);
-        }
-        
-        .depoimento-card {
-            background: rgba(51,51,51,0.3);
+        .stat-card {
+            background: rgba(255,255,255,0.2);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(197,165,106,0.2);
-            border-radius: 32px;
-            padding: 48px;
-            position: relative;
-            max-width: 768px;
-            margin: 0 auto;
-        }
-        
-        .quote-icon {
-            position: absolute;
-            top: 24px;
-            left: 24px;
-            color: rgba(197,165,106,0.3);
-            width: 48px;
-            height: 48px;
-        }
-        
-        .depoimento-content {
+            padding: 48px 32px;
+            border-radius: 24px;
             text-align: center;
+            transition: all 0.3s ease;
         }
         
-        .depoimento-avatar {
-            margin-bottom: 32px;
+        .stat-card:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.3);
         }
         
-        .depoimento-avatar img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0 auto 16px;
-            border: 3px solid rgba(197,165,106,0.3);
-        }
-        
-        .stars {
-            display: flex;
-            justify-content: center;
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--brand-black);
             margin-bottom: 16px;
         }
         
-        .stars svg {
-            color: #C5A56A;
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
+        .timeline-section {
+            background: var(--brand-gray);
         }
         
-        .depoimento-text {
-            font-size: 24px;
-            color: rgba(245,245,245,0.9);
-            line-height: 1.6;
-            margin-bottom: 32px;
-            font-style: italic;
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .depoimento-author {
+        .timeline-item {
             display: flex;
-            flex-direction: column;
-            gap: 8px;
+            align-items: center;
+            margin-bottom: 64px;
+            position: relative;
         }
         
-        .author-name {
-            color: #C5A56A;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            font-size: 20px;
+        .timeline-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--brand-gold);
+            color: var(--brand-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 24px;
+            margin-right: 32px;
+            flex-shrink: 0;
         }
         
-        .author-role {
-            color: rgba(245,245,245,0.7);
+        .testimonials-section {
+            background: var(--brand-black);
         }
         
-        .author-result {
-            background: rgba(197,165,106,0.2);
-            color: #C5A56A;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 16px;
-            display: inline-block;
+        .testimonial-card {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
         }
         
-        /* Blog */
         .blog-section {
             background: var(--brand-gray);
         }
@@ -668,251 +398,39 @@
         }
         
         .blog-card {
-            background: linear-gradient(135deg, rgba(51,51,51,0.8) 0%, rgba(0,0,0,0.9) 100%);
-            backdrop-filter: blur(13px);
-            border: 1px solid rgba(197,165,106,0.2);
-            border-radius: 32px;
-            box-shadow: 0 20px 60px -15px rgba(0,0,0,0.7);
-            cursor: pointer;
-            transition: all 0.5s;
+            background: var(--brand-black);
+            border-radius: 24px;
             overflow: hidden;
+            border: 1px solid rgba(197, 165, 106, 0.2);
+            transition: all 0.5s ease;
         }
         
         .blog-card:hover {
-            transform: scale(1.02);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(197, 165, 106, 0.25);
         }
         
-        .blog-image {
-            position: relative;
-            overflow: hidden;
-            border-radius: 16px;
-            margin-bottom: 24px;
-        }
-        
-        .blog-image img {
-            width: 100%;
-            height: 192px;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .blog-card:hover .blog-image img {
-            transform: scale(1.05);
-        }
-        
-        .blog-badge {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-        }
-        
-        .blog-badge span {
-            background: #C5A56A;
-            color: #000000;
-            padding: 6px 12px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        .blog-content {
-            padding: 24px;
-        }
-        
-        .blog-meta {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: rgba(245,245,245,0.6);
-            font-size: 12px;
-            margin-bottom: 16px;
-        }
-        
-        .blog-meta-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        
-        .blog-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        
-        .blog-meta svg {
-            width: 16px;
-            height: 16px;
-        }
-        
-        .blog-title {
-            font-size: 20px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #C5A56A;
-        }
-        
-        .blog-excerpt {
-            color: rgba(245,245,245,0.8);
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
-        
-        .blog-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .blog-link {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #C5A56A;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .blog-link:hover {
-            color: #EADCA6;
-        }
-        
-        .blog-link svg {
-            width: 16px;
-            height: 16px;
-            transition: transform 0.3s;
-        }
-        
-        .blog-link:hover svg {
-            transform: translateX(4px);
-        }
-        
-        .blog-read-time {
-            color: rgba(245,245,245,0.4);
-            font-size: 12px;
-        }
-        
-        .blog-cta {
-            text-align: center;
-            margin-top: 48px;
-        }
-        
-        /* CTA Final */
-        .cta-section {
-            background: linear-gradient(135deg, #333333 0%, #000000 100%);
-        }
-        
-        .cta-content {
-            max-width: 768px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 48px;
-            text-align: center;
-        }
-        
-        .cta-title {
-            font-size: clamp(36px, 6vw, 64px);
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-bottom: 40px;
-            color: #C5A56A;
-        }
-        
-        .cta-title .gradient-text {
-            background: linear-gradient(to right, #C5A56A, #EADCA6, #C5A56A);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .cta-description {
-            font-size: 20px;
-            color: rgba(245,245,245,0.8);
-            line-height: 1.6;
-        }
-        
-        .cta-stats {
-            background: rgba(51,51,51,0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(197,165,106,0.2);
-            border-radius: 24px;
-            padding: 32px;
-            margin-bottom: 64px;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 32px;
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 36px;
-            font-weight: 700;
-            color: #C5A56A;
-            margin-bottom: 12px;
-        }
-        
-        .stat-label {
-            color: rgba(245,245,245,0.7);
-        }
-        
-        .cta-button {
-            background: #C5A56A;
-            color: #000000;
-            font-weight: 600;
-            padding: 32px 64px;
-            border-radius: 24px;
-            display: inline-block;
-            text-decoration: none;
-            font-size: 24px;
-            box-shadow: 0 25px 50px -12px rgba(197,165,106,0.25);
-            transition: all 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: #EADCA6;
-            transform: translateY(-2px);
-        }
-        
-        .cta-disclaimer {
-            color: rgba(245,245,245,0.6);
-            margin-top: 32px;
-            font-size: 18px;
-        }
-        
-        /* Footer */
         .footer {
             background: var(--brand-gray);
-            padding: 48px 0;
+            padding: 64px 0 32px;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin-bottom: 32px;
+            gap: 48px;
+            margin-bottom: 48px;
         }
         
-        .footer-section {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        
-        .footer-title {
+        .footer-section h3 {
+            margin-bottom: 24px;
             font-size: 18px;
-            font-weight: 600;
-            color: var(--brand-gold);
         }
         
         .footer-links {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
         }
         
         .footer-links a {
@@ -925,43 +443,13 @@
             color: var(--brand-gold);
         }
         
-        .footer-description {
-            color: rgba(245,245,245,0.8);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        
-        .footer-contact {
-            font-size: 14px;
-        }
-        
-        .footer-contact p {
-            color: rgba(245,245,245,0.8);
-            margin-bottom: 8px;
-        }
-        
-        .footer-contact a {
-            color: rgba(245,245,245,0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-contact a:hover {
-            color: var(--brand-gold);
-        }
-        
         .footer-bottom {
             border-top: 1px solid rgba(245,245,245,0.2);
             padding-top: 32px;
             text-align: center;
-        }
-        
-        .footer-bottom p {
             color: rgba(245,245,245,0.6);
-            font-size: 14px;
         }
         
-        /* WhatsApp Button */
         .whatsapp-button {
             position: fixed;
             bottom: 24px;
@@ -977,404 +465,477 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             transition: all 0.3s;
             text-decoration: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .whatsapp-button.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .whatsapp-button:hover {
             transform: scale(1.1);
         }
         
-        .whatsapp-icon {
-            width: 32px;
-            height: 32px;
-            color: white;
+        .mobile-menu {
+            display: none;
         }
         
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateX(-50%) translateY(0px); }
-            50% { transform: translateX(-50%) translateY(-10px); }
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 24px;
-            }
-            
+        @media (max-width: 1024px) {
             .nav {
                 display: none;
             }
             
-            .section {
-                padding: 64px 0 96px;
+            .mobile-menu {
+                display: block;
+                color: var(--brand-white);
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
             }
             
-            .hero-content {
-                gap: 48px;
+            .container {
+                padding: 0 24px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .advantage-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
             }
             
-            .trust-indicators {
+            .carousel-content {
                 flex-direction: column;
-                align-items: center;
+                text-align: center;
+                padding: 48px 0;
             }
             
-            .diferenciais-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            
-            .servicos-grid {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-            
-            .processo-grid {
-                grid-template-columns: 1fr;
-                gap: 48px;
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
             }
             
             .blog-grid {
                 grid-template-columns: 1fr;
-                gap: 24px;
             }
             
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
+            .section {
+                padding: 64px 0;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        .hero-float {
+            animation: heroFloat 4s ease-in-out infinite;
+        }
+        
+        .pulse-gold {
+            animation: pulse-gold 2s infinite;
+        }
+        
+        @keyframes pulse-gold {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(197, 165, 106, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(197, 165, 106, 0);
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                     <div class="logo-text">REAL</div>
                     <div class="logo-subtitle">Consultoria Empresarial & Jurídica</div>
                 </a>
                 
                 <nav class="nav">
-                    <a href="#home">Home</a>
+                    <a href="index.html" class="active">Home</a>
                     <a href="sobre.html">Sobre Nós</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#cases">Cases de Sucesso</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="cases.html">Cases de Sucesso</a>
                     <a href="contato.html">Contato</a>
                 </nav>
                 
                 <div>
                     <a href="contato.html" class="brand-button">Quero minha Análise</a>
                 </div>
+                
+                <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-background"></div>
+    <section class="hero-section">
+        <div class="hero-bg" id="heroBg">
+            <div class="hero-bg-image" id="heroImage1" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); opacity: 1;"></div>
+            <div class="hero-bg-image" id="heroImage2" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); opacity: 0;"></div>
+            <div class="hero-bg-image" id="heroImage3" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); opacity: 0;"></div>
+        </div>
         <div class="hero-overlay"></div>
         
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    Resolva seus Desafios Jurídicos e Empresariais
-                    <span class="gradient-text">Mais Complexos</span>
-                    <span style="font-size: clamp(36px, 6vw, 60px); color: #C5A56A;">Com Risco Zero.</span>
+                <div style="margin-bottom: 32px;">
+                    <div style="background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-light)); color: var(--brand-black); padding: 12px 32px; border-radius: 50px; font-weight: 700; display: inline-block; box-shadow: 0 0 20px rgba(197, 165, 106, 0.3);">
+                        🏆 Excelência Comprovada em Resultados
+                    </div>
+                </div>
+
+                <h1 style="font-size: clamp(48px, 8vw, 96px); font-weight: 700; line-height: 1.1; margin-bottom: 32px;">
+                    Transforme Desafios Complexos em
+                    <span class="text-gradient" style="display: block; margin-top: 16px;">Soluções Estratégicas</span>
+                    <span style="display: block; margin-top: 16px; font-size: clamp(32px, 6vw, 64px);">
+                        Com Metodologia Única
+                    </span>
                 </h1>
                 
-                <p class="hero-subtitle">
-                    Compromisso, transparência e excelência para seus desafios.
-                    <span class="highlight">Você só paga se tiver sucesso.</span>
+                <p style="font-size: clamp(18px, 3vw, 24px); color: rgba(245,245,245,0.95); max-width: 800px; margin: 0 auto 48px; line-height: 1.6;">
+                    Combinamos expertise jurídica e visão empresarial para entregar resultados que impactam diretamente o crescimento do seu negócio.
+                    <span style="color: var(--brand-gold); font-weight: 600; display: block; margin-top: 16px;">
+                        📈 Resultados Mensuráveis • 🎯 Estratégias Personalizadas • ⚡ Execução Rápida
+                    </span>
                 </p>
 
-                <!-- Trust Indicators -->
-                <div class="trust-indicators">
-                    <div class="trust-indicator">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                        <span>Risco Zero</span>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-bottom: 48px;">
+                    <div class="glass-card" style="display: flex; align-items: center; gap: 16px; padding: 24px; margin: 0;">
+                        <div style="font-size: 28px; color: var(--brand-gold);">🛡️</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 18px;">Garantia Total</div>
+                            <div style="color: rgba(245,245,245,0.7); font-size: 14px;">Comprometimento absoluto</div>
+                        </div>
                     </div>
-                    <div class="trust-indicator">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"/>
-                            <circle cx="12" cy="12" r="6"/>
-                            <circle cx="12" cy="12" r="2"/>
-                        </svg>
-                        <span>100% Focado em Resultados</span>
+                    
+                    <div class="glass-card" style="display: flex; align-items: center; gap: 16px; padding: 24px; margin: 0;">
+                        <div style="font-size: 28px; color: var(--brand-gold);">📈</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 18px;">ROI Comprovado</div>
+                            <div style="color: rgba(245,245,245,0.7); font-size: 14px;">Retorno sobre investimento</div>
+                        </div>
                     </div>
-                    <div class="trust-indicator">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12,6 12,12 16,14"/>
-                        </svg>
-                        <span>Resposta em 24h</span>
+                    
+                    <div class="glass-card" style="display: flex; align-items: center; gap: 16px; padding: 24px; margin: 0;">
+                        <div style="font-size: 28px; color: var(--brand-gold);">⚡</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 18px;">Metodologia Exclusiva</div>
+                            <div style="color: rgba(245,245,245,0.7); font-size: 14px;">Abordagem diferenciada</div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="hero-cta">
-                    <a href="contato.html" class="hero-button">
-                        Quero minha Análise GRATUITA
+                <div class="hero-float">
+                    <a href="contato.html" class="brand-button" style="font-size: 20px; padding: 24px 48px; display: inline-flex; align-items: center; gap: 12px;">
+                        🎯 Descobrir Minha Estratégia Personalizada
                     </a>
-                    <p class="hero-disclaimer">
-                        ⏰ Análise estratégica sem custo • Sem compromisso
+                    <p style="color: rgba(245,245,245,0.7); margin-top: 24px; font-size: 18px;">
+                        🚀 Análise estratégica personalizada • 💡 Sem compromisso inicial • 📊 Diagnóstico completo
                     </p>
                 </div>
             </div>
         </div>
         
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <polyline points="6,9 12,15 18,9"/>
-            </svg>
+        <div style="position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); color: var(--brand-gold); font-size: 40px;" class="hero-float">
+            ↓
         </div>
     </section>
 
-    <!-- Seção Diferenciais -->
-    <section id="diferenciais" class="section diferenciais-section">
+    <!-- Competitive Advantages -->
+    <section class="section competitive-advantages">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 96px;">
-                <h2 class="section-title">A Parceria que Sua Empresa Realmente Precisa</h2>
-                <p class="section-subtitle">
-                    Descubra por que empresários escolhem nosso modelo único de consultoria
-                </p>
-            </div>
+            <h2 class="section-title">Por que Escolher a REAL Consultoria?</h2>
+            <p style="text-align: center; font-size: 20px; color: rgba(245,245,245,0.8); max-width: 800px; margin: 0 auto 64px;">
+                Nossos diferenciais competitivos garantem resultados superiores e uma parceria de verdade
+            </p>
             
-            <div class="diferenciais-grid">
-                <div class="diferencial-card">
-                    <div class="diferencial-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"/>
-                            <circle cx="12" cy="12" r="6"/>
-                            <circle cx="12" cy="12" r="2"/>
-                        </svg>
-                    </div>
-                    <div class="diferencial-badge">Risco Zero</div>
-                    <h3 class="diferencial-title">Modelo de Êxito Garantido</h3>
-                    <p class="diferencial-description">
-                        Você só paga pelo resultado alcançado. Seu sucesso é literalmente o nosso sucesso.
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <div style="font-size: 64px; margin-bottom: 24px;">🎯</div>
+                    <h3 style="font-size: 24px; margin-bottom: 16px;">Metodologia Exclusiva R.E.A.L</h3>
+                    <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                        <strong>R</strong>econhecimento do problema<br>
+                        <strong>E</strong>stratégia personalizada<br>
+                        <strong>A</strong>ção direcionada<br>
+                        <strong>L</strong>egado de resultados
                     </p>
                 </div>
-
-                <div class="diferencial-card">
-                    <div class="diferencial-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="m22 21-3-3m0 0-3-3m3 3 3-3m-3 3-3 3"/>
-                        </svg>
-                    </div>
-                    <div class="diferencial-badge">Sócios Envolvidos</div>
-                    <h3 class="diferencial-title">Compromisso Total</h3>
-                    <p class="diferencial-description">
-                        Envolvimento direto dos sócios no seu caso para garantir agilidade e decisões assertivas.
+                
+                <div class="advantage-card">
+                    <div style="font-size: 64px; margin-bottom: 24px;">💰</div>
+                    <h3 style="font-size: 24px; margin-bottom: 16px;">Modelo Baseado em Êxito</h3>
+                    <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                        Você só paga quando alcançamos os resultados prometidos. 
+                        Nosso sucesso está diretamente ligado ao seu sucesso.
                     </p>
                 </div>
-
-                <div class="diferencial-card">
-                    <div class="diferencial-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="6" cy="6" r="3"/>
-                            <circle cx="6" cy="18" r="3"/>
-                            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
-                            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
-                            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
-                        </svg>
-                    </div>
-                    <div class="diferencial-badge">100% Transparente</div>
-                    <h3 class="diferencial-title">Transparência Absoluta</h3>
-                    <p class="diferencial-description">
-                        Comunicação clara e honesta do início ao fim do processo. Sem surpresas ou custos ocultos.
+                
+                <div class="advantage-card">
+                    <div style="font-size: 64px; margin-bottom: 24px;">👥</div>
+                    <h3 style="font-size: 24px; margin-bottom: 16px;">Atendimento Direto dos Sócios</h3>
+                    <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                        Você não será atendido por estagiários ou terceiros. 
+                        Nossos sócios-fundadores cuidam pessoalmente do seu caso.
                     </p>
                 </div>
-
-                <div class="diferencial-card">
-                    <div class="diferencial-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
-                        </svg>
-                    </div>
-                    <div class="diferencial-badge">Estratégia Única</div>
-                    <h3 class="diferencial-title">Soluções Sob Medida</h3>
-                    <p class="diferencial-description">
-                        Não usamos fórmulas prontas. Mergulhamos no seu desafio para construir a estratégia vencedora.
+                
+                <div class="advantage-card">
+                    <div style="font-size: 64px; margin-bottom: 24px;">⚡</div>
+                    <h3 style="font-size: 24px; margin-bottom: 16px;">Agilidade na Execução</h3>
+                    <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                        Processos otimizados e equipe dedicada garantem 
+                        implementação rápida das soluções estratégicas.
+                    </p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div style="font-size: 64px; margin-bottom: 24px;">🔍</div>
+                    <h3 style="font-size: 24px; margin-bottom: 16px;">Transparência Total</h3>
+                    <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                        Relatórios detalhados, comunicação constante e 
+                        acesso total ao progresso do seu projeto.
+                    </p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div style="font-size: 64px; margin-bottom: 24px;">🚀</div>
+                    <h3 style="font-size: 24px; margin-bottom: 16px;">Visão de Crescimento</h3>
+                    <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                        Não apenas resolvemos problemas, criamos estratégias 
+                        para crescimento sustentável e expansão.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Serviços -->
-    <section id="servicos" class="section servicos-section">
+    <!-- Services Carousel -->
+    <section class="section carousel-container">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 96px;">
-                <h2 class="section-title">Nossa Expertise ao seu Dispor</h2>
-                <p class="section-subtitle">
-                    Soluções completas para seus desafios empresariais e jurídicos mais complexos
-                </p>
-            </div>
+            <h2 class="section-title">Nossos Serviços Especializados</h2>
             
-            <div class="servicos-grid">
-                <!-- Consultoria Empresarial -->
-                <div class="servico-card">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultoria Empresarial">
-                        <div class="servico-overlay"></div>
-                        <div class="servico-badge">
-                            <span>Consultoria Empresarial</span>
+            <div style="position: relative; overflow: hidden; border-radius: 24px;">
+                <div id="servicesCarousel" style="display: flex; transition: transform 0.5s ease;">
+                    <div class="carousel-slide">
+                        <div class="carousel-content">
+                            <div style="flex: 1;">
+                                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reestruturação Empresarial" style="width: 100%; height: 400px; object-fit: cover; border-radius: 16px;">
+                            </div>
+                            <div style="flex: 1; padding-left: 48px;">
+                                <h3 style="font-size: 32px; margin-bottom: 24px;">Reestruturação Empresarial</h3>
+                                <p style="font-size: 18px; color: rgba(245,245,245,0.8); margin-bottom: 32px; line-height: 1.6;">
+                                    Transformamos empresas em crise em negócios prósperos através de análise profunda, 
+                                    reestruturação estratégica e implementação de processos eficientes.
+                                </p>
+                                <ul style="color: rgba(245,245,245,0.8); margin-bottom: 32px;">
+                                    <li>✓ Diagnóstico completo da situação</li>
+                                    <li>✓ Plano de ação personalizado</li>
+                                    <li>✓ Acompanhamento na execução</li>
+                                    <li>✓ Resultados mensuráveis</li>
+                                </ul>
+                                <a href="contato.html" class="brand-button">Solicitar Análise</a>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="servico-content">
-                        <h3 class="servico-title">Transformação Empresarial</h3>
-                        <p class="servico-description">
-                            Reestruturação organizacional, planejamento estratégico, gestão de crises 
-                            e soluções personalizadas para aumentar a eficiência e lucratividade do seu negócio.
-                        </p>
-                        <div class="servico-features">
-                            <div class="servico-feature">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>Reestruturação organizacional completa</span>
+                    <div class="carousel-slide">
+                        <div class="carousel-content">
+                            <div style="flex: 1;">
+                                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultoria Jurídica" style="width: 100%; height: 400px; object-fit: cover; border-radius: 16px;">
                             </div>
-                            <div class="servico-feature">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>Planejamento estratégico de longo prazo</span>
-                            </div>
-                            <div class="servico-feature">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>Gestão de crises e recuperação</span>
+                            <div style="flex: 1; padding-left: 48px;">
+                                <h3 style="font-size: 32px; margin-bottom: 24px;">Consultoria Jurídica Empresarial</h3>
+                                <p style="font-size: 18px; color: rgba(245,245,245,0.8); margin-bottom: 32px; line-height: 1.6;">
+                                    Protegemos seu negócio com soluções jurídicas estratégicas, prevenindo problemas 
+                                    e resolvendo conflitos de forma eficiente e econômica.
+                                </p>
+                                <ul style="color: rgba(245,245,245,0.8); margin-bottom: 32px;">
+                                    <li>✓ Contratos empresariais blindados</li>
+                                    <li>✓ Recuperação de créditos</li>
+                                    <li>✓ Estruturação societária</li>
+                                    <li>✓ Compliance corporativo</li>
+                                </ul>
+                                <a href="contato.html" class="brand-button">Falar com Advogado</a>
                             </div>
                         </div>
-                        <a href="contato.html" class="servico-link">
-                            <span>Saiba Mais</span>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <polyline points="9,18 15,12 9,6"/>
-                            </svg>
-                        </a>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="carousel-content">
+                            <div style="flex: 1;">
+                                <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Estratégias de Crescimento" style="width: 100%; height: 400px; object-fit: cover; border-radius: 16px;">
+                            </div>
+                            <div style="flex: 1; padding-left: 48px;">
+                                <h3 style="font-size: 32px; margin-bottom: 24px;">Estratégias de Crescimento</h3>
+                                <p style="font-size: 18px; color: rgba(245,245,245,0.8); margin-bottom: 32px; line-height: 1.6;">
+                                    Desenvolvemos estratégias personalizadas para acelerar o crescimento do seu negócio 
+                                    com foco em resultados sustentáveis e escalabilidade.
+                                </p>
+                                <ul style="color: rgba(245,245,245,0.8); margin-bottom: 32px;">
+                                    <li>✓ Análise de mercado e concorrência</li>
+                                    <li>✓ Plano de expansão estruturado</li>
+                                    <li>✓ Otimização de processos</li>
+                                    <li>✓ Métricas de performance</li>
+                                </ul>
+                                <a href="contato.html" class="brand-button">Planejar Crescimento</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Consultoria Jurídica -->
-                <div class="servico-card">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultoria Jurídica">
-                        <div class="servico-overlay"></div>
-                        <div class="servico-badge">
-                            <span>Consultoria Jurídica</span>
-                        </div>
-                    </div>
-                    
-                    <div class="servico-content">
-                        <h3 class="servico-title">Proteção Jurídica Estratégica</h3>
-                        <p class="servico-description">
-                            Direito empresarial, societário, contencioso estratégico e assessoria 
-                            jurídica especializada para proteger e impulsionar seus negócios.
-                        </p>
-                        <div class="servico-features">
-                            <div class="servico-feature">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>Direito empresarial e societário</span>
-                            </div>
-                            <div class="servico-feature">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>Contencioso estratégico</span>
-                            </div>
-                            <div class="servico-feature">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>Recuperação de créditos</span>
-                            </div>
-                        </div>
-                        <a href="contato.html" class="servico-link">
-                            <span>Saiba Mais</span>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <polyline points="9,18 15,12 9,6"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                <button onclick="changeSlide(-1)" style="position: absolute; left: 24px; top: 50%; transform: translateY(-50%); background: rgba(197,165,106,0.2); border: none; color: var(--brand-gold); padding: 16px; border-radius: 50%; cursor: pointer; backdrop-filter: blur(10px);">
+                    ‹
+                </button>
+                <button onclick="changeSlide(1)" style="position: absolute; right: 24px; top: 50%; transform: translateY(-50%); background: rgba(197,165,106,0.2); border: none; color: var(--brand-gold); padding: 16px; border-radius: 50%; cursor: pointer; backdrop-filter: blur(10px);">
+                    ›
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Seção Processo -->
-    <section id="processo" class="section processo-section">
+    <!-- Animated Stats -->
+    <section class="section stats-section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 96px;">
-                <h2 class="section-title">Como Funciona o Modelo Baseado em Êxito?</h2>
-                <p class="section-subtitle">
-                    Um processo transparente e estruturado para garantir os melhores resultados
-                </p>
-            </div>
+            <h2 style="color: var(--brand-black); text-align: center; font-size: clamp(36px, 6vw, 64px); margin-bottom: 24px;">
+                Números que Falam por Si
+            </h2>
+            <p style="color: rgba(0,0,0,0.8); text-align: center; font-size: 20px; max-width: 600px; margin: 0 auto 64px;">
+                Resultados comprovados que demonstram nosso compromisso com a excelência
+            </p>
             
-            <div class="processo-grid">
-                <!-- Passo 1 -->
-                <div class="processo-card">
-                    <div class="processo-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Análise Estratégica">
-                        <div class="processo-image-overlay"></div>
-                        <div class="processo-number">01</div>
-                    </div>
-                    
-                    <div class="processo-content">
-                        <h3 class="processo-title">Análise Estratégica</h3>
-                        <p class="processo-description">
-                            Mergulhamos fundo no seu caso para definir as metas e o caminho para a vitória. Análise completa sem custo para você.
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div style="font-size: 48px; color: var(--brand-black); margin-bottom: 16px;">🎯</div>
+                    <div class="stat-number" id="stat1">0</div>
+                    <h3 style="color: var(--brand-black); font-size: 18px; margin-bottom: 8px;">Taxa de Sucesso</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 14px;">Casos resolvidos com êxito</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div style="font-size: 48px; color: var(--brand-black); margin-bottom: 16px;">👥</div>
+                    <div class="stat-number" id="stat2">0</div>
+                    <h3 style="color: var(--brand-black); font-size: 18px; margin-bottom: 8px;">Clientes Atendidos</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 14px;">Empresas transformadas</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div style="font-size: 48px; color: var(--brand-black); margin-bottom: 16px;">🏆</div>
+                    <div class="stat-number" id="stat3">0</div>
+                    <h3 style="color: var(--brand-black); font-size: 18px; margin-bottom: 8px;">Anos de Experiência</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 14px;">Expertise comprovada</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div style="font-size: 48px; color: var(--brand-black); margin-bottom: 16px;">📈</div>
+                    <div class="stat-number" id="stat4">0</div>
+                    <h3 style="color: var(--brand-black); font-size: 18px; margin-bottom: 8px;">Cases de Sucesso</h3>
+                    <p style="color: rgba(0,0,0,0.7); font-size: 14px;">Resultados entregues</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline -->
+    <section class="section timeline-section">
+        <div class="container">
+            <h2 class="section-title">Nossa Metodologia em 5 Etapas</h2>
+            <p style="text-align: center; font-size: 20px; color: rgba(245,245,245,0.8); max-width: 600px; margin: 0 auto 64px;">
+                Processo estruturado que garante resultados efetivos
+            </p>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div>
+                        <h3 style="font-size: 24px; margin-bottom: 16px;">Diagnóstico Profundo</h3>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Análise completa da situação atual, identificação de problemas críticos 
+                            e mapeamento de oportunidades de melhoria.
                         </p>
                     </div>
                 </div>
-
-                <!-- Passo 2 -->
-                <div class="processo-card">
-                    <div class="processo-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Execução Focada">
-                        <div class="processo-image-overlay"></div>
-                        <div class="processo-number">02</div>
-                    </div>
-                    
-                    <div class="processo-content">
-                        <h3 class="processo-title">Execução Focada</h3>
-                        <p class="processo-description">
-                            Implementamos o plano com agilidade e mantemos você informado em cada etapa. Transparência total durante todo o processo.
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div>
+                        <h3 style="font-size: 24px; margin-bottom: 16px;">Estratégia Personalizada</h3>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Desenvolvimento de plano de ação específico para suas necessidades, 
+                            com metas claras e cronograma detalhado.
                         </p>
                     </div>
                 </div>
-
-                <!-- Passo 3 -->
-                <div class="processo-card">
-                    <div class="processo-image">
-                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Resultado e Êxito">
-                        <div class="processo-image-overlay"></div>
-                        <div class="processo-number">03</div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div>
+                        <h3 style="font-size: 24px; margin-bottom: 16px;">Implementação Ágil</h3>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Execução eficiente das soluções com acompanhamento constante 
+                            e ajustes quando necessário.
+                        </p>
                     </div>
-                    
-                    <div class="processo-content">
-                        <h3 class="processo-title">Resultado e Êxito</h3>
-                        <p class="processo-description">
-                            Alcançamos o objetivo definido e celebramos juntos. É aqui que nossa parceria é remunerada pelo sucesso obtido.
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div>
+                        <h3 style="font-size: 24px; margin-bottom: 16px;">Monitoramento Contínuo</h3>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Acompanhamento dos resultados com relatórios periódicos 
+                            e métricas de performance.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div>
+                        <h3 style="font-size: 24px; margin-bottom: 16px;">Consolidação dos Resultados</h3>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Garantia de sustentabilidade das melhorias implementadas 
+                            e preparação para crescimento futuro.
                         </p>
                     </div>
                 </div>
@@ -1382,304 +943,203 @@
         </div>
     </section>
 
-    <!-- Seção Depoimentos -->
-    <section id="cases" class="section depoimentos-section">
-        <div class="depoimentos-overlay"></div>
-        
-        <div class="container" style="position: relative; z-index: 10;">
-            <div style="text-align: center; margin-bottom: 64px;">
-                <h2 class="section-title">O que Nossos Clientes Dizem</h2>
-                <p class="section-subtitle">
-                    Histórias reais de transformação e sucesso
-                </p>
-            </div>
-
-            <div class="depoimento-card">
-                <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-                </svg>
+    <!-- Testimonials -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title">O que Nossos Clientes Dizem</h2>
+            <p style="text-align: center; font-size: 20px; color: rgba(245,245,245,0.8); max-width: 600px; margin: 0 auto 64px;">
+                Histórias reais de transformação e sucesso
+            </p>
+            
+            <div class="testimonial-card glass-card" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <div style="font-size: 64px; color: rgba(197,165,106,0.3); margin-bottom: 24px;">"</div>
                 
-                <div class="depoimento-content">
-                    <div class="depoimento-avatar">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ricardo Silva">
-                        <div class="stars">
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                            </svg>
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                            </svg>
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                            </svg>
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                            </svg>
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                            </svg>
-                        </div>
+                <div id="testimonialContent">
+                    <img id="testimonialImage" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cliente" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 24px; border: 3px solid rgba(197,165,106,0.3);">
+                    
+                    <div style="margin-bottom: 24px;">
+                        <span style="color: var(--brand-gold); font-size: 20px;">★★★★★</span>
                     </div>
-
-                    <blockquote class="depoimento-text">
+                    
+                    <blockquote id="testimonialText" style="font-size: 20px; color: rgba(245,245,245,0.9); margin-bottom: 32px; line-height: 1.6; font-style: italic;">
                         "A REAL Consultoria salvou nossa empresa de uma crise que parecia sem solução. O modelo de pagamento por êxito nos deu confiança total no processo."
                     </blockquote>
-
-                    <div class="depoimento-author">
-                        <h4 class="author-name">Ricardo Silva</h4>
-                        <p class="author-role">CEO - Indústria Metalúrgica</p>
-                        <div class="author-result">
+                    
+                    <div>
+                        <h4 id="testimonialName" style="color: var(--brand-gold); font-size: 20px; margin-bottom: 8px;">
+                            Ricardo Silva
+                        </h4>
+                        <p id="testimonialCompany" style="color: rgba(245,245,245,0.7); margin-bottom: 16px;">
+                            CEO - Indústria Metalúrgica
+                        </p>
+                        <div id="testimonialResult" style="background: rgba(197,165,106,0.2); color: var(--brand-gold); padding: 12px 24px; border-radius: 50px; display: inline-block; font-weight: 600;">
                             Economia de R$ 1.2M em reestruturação
                         </div>
                     </div>
                 </div>
+                
+                <div style="display: flex; justify-content: center; gap: 12px; margin-top: 32px;">
+                    <button onclick="changeTestimonial(0)" class="testimonial-dot active" style="width: 12px; height: 12px; border-radius: 50%; background: var(--brand-gold); border: none; cursor: pointer;"></button>
+                    <button onclick="changeTestimonial(1)" class="testimonial-dot" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(245,245,245,0.3); border: none; cursor: pointer;"></button>
+                    <button onclick="changeTestimonial(2)" class="testimonial-dot" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(245,245,245,0.3); border: none; cursor: pointer;"></button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Blog -->
+    <!-- Blog Section -->
     <section class="section blog-section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 64px;">
-                <h2 class="section-title">Insights Estratégicos</h2>
-                <p class="section-subtitle">
-                    Conhecimento prático e estratégias comprovadas para resolver desafios empresariais complexos
-                </p>
-            </div>
+            <h2 class="section-title">Insights Estratégicos</h2>
+            <p style="text-align: center; font-size: 20px; color: rgba(245,245,245,0.8); max-width: 600px; margin: 0 auto 64px;">
+                Conhecimento prático para resolver desafios empresariais
+            </p>
             
             <div class="blog-grid">
-                <!-- Artigo 1 -->
                 <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Como Identificar se Sua Empresa Precisa de Reestruturação Urgente">
-                        <div class="blog-badge">
-                            <span>Estratégia</span>
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Artigo" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; top: 16px; left: 16px; background: var(--brand-gold); color: var(--brand-black); padding: 8px 16px; border-radius: 50px; font-size: 12px; font-weight: 600;">
+                            Estratégia
                         </div>
                     </div>
-                    
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <div class="blog-meta-left">
-                                <div class="blog-meta-item">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
-                                    <span>15 Nov 2024</span>
-                                </div>
-                                <div class="blog-meta-item">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="12" cy="7" r="4"/>
-                                    </svg>
-                                    <span>Pedro Paulo</span>
-                                </div>
-                            </div>
-                            <div class="blog-meta-item">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                                <span>1.547</span>
-                            </div>
+                    <div style="padding: 32px;">
+                        <div style="color: rgba(245,245,245,0.6); font-size: 14px; margin-bottom: 16px;">
+                            📅 15 Nov 2024 • 👤 Pedro Paulo • 👁 1.547 visualizações
                         </div>
-                        
-                        <h3 class="blog-title">
+                        <h3 style="font-size: 20px; margin-bottom: 16px; line-height: 1.3;">
                             Como Identificar se Sua Empresa Precisa de Reestruturação Urgente
                         </h3>
-                        
-                        <p class="blog-excerpt">
+                        <p style="color: rgba(245,245,245,0.8); margin-bottom: 24px; line-height: 1.6;">
                             Sinais claros que indicam a necessidade de intervenção estratégica imediata para evitar maiores prejuízos.
                         </p>
-                        
-                        <div class="blog-footer">
-                            <a href="contato.html" class="blog-link">
-                                <span>Ler Artigo</span>
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <polyline points="9,18 15,12 9,6"/>
-                                </svg>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" style="color: var(--brand-gold); text-decoration: none; font-weight: 600;">
+                                Ler Artigo →
                             </a>
-                            
-                            <div class="blog-read-time">
-                                5 min de leitura
-                            </div>
+                            <span style="color: rgba(245,245,245,0.4); font-size: 14px;">5 min</span>
                         </div>
                     </div>
                 </article>
-
-                <!-- Artigo 2 -->
+                
                 <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modelo de Pagamento por Êxito: Por que Funciona Melhor">
-                        <div class="blog-badge">
-                            <span>Negócios</span>
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Artigo" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; top: 16px; left: 16px; background: var(--brand-gold); color: var(--brand-black); padding: 8px 16px; border-radius: 50px; font-size: 12px; font-weight: 600;">
+                            Negócios
                         </div>
                     </div>
-                    
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <div class="blog-meta-left">
-                                <div class="blog-meta-item">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
-                                    <span>10 Nov 2024</span>
-                                </div>
-                                <div class="blog-meta-item">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="12" cy="7" r="4"/>
-                                    </svg>
-                                    <span>João Pedro</span>
-                                </div>
-                            </div>
-                            <div class="blog-meta-item">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                                <span>2.103</span>
-                            </div>
+                    <div style="padding: 32px;">
+                        <div style="color: rgba(245,245,245,0.6); font-size: 14px; margin-bottom: 16px;">
+                            📅 10 Nov 2024 • 👤 João Pedro • 👁 2.103 visualizações
                         </div>
-                        
-                        <h3 class="blog-title">
+                        <h3 style="font-size: 20px; margin-bottom: 16px; line-height: 1.3;">
                             Modelo de Pagamento por Êxito: Por que Funciona Melhor
                         </h3>
-                        
-                        <p class="blog-excerpt">
+                        <p style="color: rgba(245,245,245,0.8); margin-bottom: 24px; line-height: 1.6;">
                             Descubra por que o modelo baseado em resultados alinha os interesses do cliente e consultor de forma única.
                         </p>
-                        
-                        <div class="blog-footer">
-                            <a href="contato.html" class="blog-link">
-                                <span>Ler Artigo</span>
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <polyline points="9,18 15,12 9,6"/>
-                                </svg>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" style="color: var(--brand-gold); text-decoration: none; font-weight: 600;">
+                                Ler Artigo →
                             </a>
-                            
-                            <div class="blog-read-time">
-                                5 min de leitura
-                            </div>
+                            <span style="color: rgba(245,245,245,0.4); font-size: 14px;">4 min</span>
                         </div>
                     </div>
                 </article>
-
-                <!-- Artigo 3 -->
+                
                 <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Os 5 Erros Jurídicos Mais Caros que Empresas Cometem">
-                        <div class="blog-badge">
-                            <span>Jurídico</span>
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Artigo" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; top: 16px; left: 16px; background: var(--brand-gold); color: var(--brand-black); padding: 8px 16px; border-radius: 50px; font-size: 12px; font-weight: 600;">
+                            Jurídico
                         </div>
                     </div>
-                    
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <div class="blog-meta-left">
-                                <div class="blog-meta-item">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
-                                    <span>05 Nov 2024</span>
-                                </div>
-                                <div class="blog-meta-item">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="12" cy="7" r="4"/>
-                                    </svg>
-                                    <span>Pedro Paulo</span>
-                                </div>
-                            </div>
-                            <div class="blog-meta-item">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                                <span>3.256</span>
-                            </div>
+                    <div style="padding: 32px;">
+                        <div style="color: rgba(245,245,245,0.6); font-size: 14px; margin-bottom: 16px;">
+                            📅 05 Nov 2024 • 👤 Pedro Paulo • 👁 3.256 visualizações
                         </div>
-                        
-                        <h3 class="blog-title">
+                        <h3 style="font-size: 20px; margin-bottom: 16px; line-height: 1.3;">
                             Os 5 Erros Jurídicos Mais Caros que Empresas Cometem
                         </h3>
-                        
-                        <p class="blog-excerpt">
+                        <p style="color: rgba(245,245,245,0.8); margin-bottom: 24px; line-height: 1.6;">
                             Evite prejuízos milionários conhecendo os erros mais comuns em contratos e estruturação societária.
                         </p>
-                        
-                        <div class="blog-footer">
-                            <a href="contato.html" class="blog-link">
-                                <span>Ler Artigo</span>
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <polyline points="9,18 15,12 9,6"/>
-                                </svg>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" style="color: var(--brand-gold); text-decoration: none; font-weight: 600;">
+                                Ler Artigo →
                             </a>
-                            
-                            <div class="blog-read-time">
-                                5 min de leitura
-                            </div>
+                            <span style="color: rgba(245,245,245,0.4); font-size: 14px;">6 min</span>
                         </div>
                     </div>
                 </article>
             </div>
             
-            <div class="blog-cta">
-                <a href="contato.html" class="servico-link">
-                    <span>Ver Todos os Artigos</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <polyline points="9,18 15,12 9,6"/>
-                    </svg>
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="#" class="brand-button-outline">
+                    Ver Todos os Artigos →
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- CTA Final -->
-    <section class="section cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">
-                    Pronto para Resolver Desafios Complexos com um
-                    <span class="gradient-text">Parceiro de Verdade</span>?
-                </h2>
-                <p class="cta-description">
-                    Não deixe seus problemas empresariais e jurídicos sem solução. 
-                    Agende sua análise estratégica gratuita e descubra como podemos ajudar.
-                </p>
-                
-                <div class="cta-stats">
-                    <div class="stats-grid">
-                        <div>
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Focado em Resultados</div>
-                        </div>
-                        <div>
-                            <div class="stat-number">24h</div>
-                            <div class="stat-label">Resposta Garantida</div>
-                        </div>
-                        <div>
-                            <div class="stat-number">0</div>
-                            <div class="stat-label">Custo Inicial</div>
-                        </div>
-                    </div>
+    <!-- Final CTA -->
+    <section class="section" style="background: linear-gradient(135deg, var(--brand-gray), var(--brand-black));">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: clamp(32px, 6vw, 56px); margin-bottom: 32px;">
+                Transforme Seu Negócio com
+                <span class="text-gradient">Estratégias Personalizadas</span>
+            </h2>
+            <p style="font-size: 20px; color: rgba(245,245,245,0.9); margin-bottom: 64px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Nossa metodologia exclusiva combina análise profunda, estratégias personalizadas e execução eficiente 
+                para entregar resultados que realmente impactam o crescimento do seu negócio.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 64px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div class="glass-card" style="padding: 32px; text-align: center;">
+                    <div style="font-size: 48px; font-weight: 700; color: var(--brand-gold); margin-bottom: 12px;">360°</div>
+                    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Visão Completa</div>
+                    <div style="color: rgba(245,245,245,0.7);">Análise integral do seu negócio</div>
                 </div>
-                
-                <a href="contato.html" class="cta-button">
-                    Agendar Análise Estratégica GRATUITA
+                <div class="glass-card" style="padding: 32px; text-align: center;">
+                    <div style="font-size: 48px; font-weight: 700; color: var(--brand-gold); margin-bottom: 12px;">1:1</div>
+                    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Atendimento Exclusivo</div>
+                    <div style="color: rgba(245,245,245,0.7);">Dedicação personalizada</div>
+                </div>
+                <div class="glass-card" style="padding: 32px; text-align: center;">
+                    <div style="font-size: 48px; font-weight: 700; color: var(--brand-gold); margin-bottom: 12px;">24/7</div>
+                    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Suporte Contínuo</div>
+                    <div style="color: rgba(245,245,245,0.7);">Acompanhamento integral</div>
+                </div>
+                <div class="glass-card" style="padding: 32px; text-align: center;">
+                    <div style="font-size: 48px; font-weight: 700; color: var(--brand-gold); margin-bottom: 12px;">∞</div>
+                    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Potencial Ilimitado</div>
+                    <div style="color: rgba(245,245,245,0.7);">Crescimento sem limites</div>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 32px; margin-bottom: 48px;">
+                <a href="contato.html" class="brand-button" style="font-size: 20px; padding: 24px 48px;">
+                    ✅ Iniciar Minha Transformação Agora
                 </a>
-                <p class="cta-disclaimer">
-                    🔒 Atendimento confidencial • 📞 Sem compromisso • ⏰ Vagas limitadas
+                <a href="https://wa.me/5511974517180" class="brand-button-outline" style="font-size: 18px; padding: 20px 36px;">
+                    💬 Conversar com Especialista
+                </a>
+            </div>
+            
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+                <h3 style="font-size: 24px; color: var(--brand-gold); margin-bottom: 16px;">
+                    Garantia de Satisfação Total
+                </h3>
+                <p style="color: rgba(245,245,245,0.8); font-size: 18px; line-height: 1.6;">
+                    Estamos tão confiantes na nossa metodologia que oferecemos garantia total de satisfação. 
+                    Se não ficar completamente satisfeito com os resultados, trabalhamos até que você alcance seus objetivos.
                 </p>
             </div>
+            
+            <p style="color: rgba(245,245,245,0.6); margin-top: 32px; font-size: 18px;">
+                🔒 Confidencialidade garantida • 📊 Diagnóstico detalhado • ⚡ Implementação rápida
+            </p>
         </div>
     </section>
 
@@ -1692,43 +1152,43 @@
                         <div class="logo-text">REAL</div>
                         <div class="logo-subtitle">Consultoria Empresarial & Jurídica</div>
                     </div>
-                    <p class="footer-description">
+                    <p style="color: rgba(245,245,245,0.8); margin-top: 16px; line-height: 1.6;">
                         Soluções empresariais e jurídicas de alto nível com modelo único baseado em êxito. 
                         Compromisso, transparência e resultados garantidos para seus desafios mais complexos.
                     </p>
                 </div>
 
                 <div class="footer-section">
-                    <h3 class="footer-title">Links Rápidos</h3>
+                    <h3>Links Rápidos</h3>
                     <div class="footer-links">
-                        <a href="#home">Home</a>
+                        <a href="index.html">Home</a>
                         <a href="sobre.html">Sobre Nós</a>
-                        <a href="#servicos">Serviços</a>
-                        <a href="#cases">Cases de Sucesso</a>
+                        <a href="servicos.html">Serviços</a>
+                        <a href="cases.html">Cases de Sucesso</a>
                         <a href="contato.html">Contato</a>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h3 class="footer-title">Contato</h3>
-                    <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <div style="color: rgba(245,245,245,0.8); line-height: 1.6;">
                         <p>
                             Rua São Benedito, 569 - Sala 01<br>
                             Centro - Caraguatatuba/SP<br>
                             CEP 11660-100
                         </p>
-                        <div>
+                        <div style="margin-top: 16px;">
                             <p>
                                 <span style="color: var(--brand-gold);">Pedro Paulo:</span>
-                                <a href="tel:+5511974517180">(11) 97451-7180</a>
+                                <a href="tel:+5511974517180" style="color: rgba(245,245,245,0.8); text-decoration: none;">(11) 97451-7180</a>
                             </p>
                             <p>
                                 <span style="color: var(--brand-gold);">João Pedro:</span>
-                                <a href="tel:+5512996351708">(12) 99635-1708</a>
+                                <a href="tel:+5512996351708" style="color: rgba(245,245,245,0.8); text-decoration: none;">(12) 99635-1708</a>
                             </p>
                             <p>
                                 <span style="color: var(--brand-gold);">E-mail:</span>
-                                <a href="mailto:realconsultoria.e.j@gmail.com">realconsultoria.e.j@gmail.com</a>
+                                <a href="mailto:realconsultoria.e.j@gmail.com" style="color: rgba(245,245,245,0.8); text-decoration: none;">realconsultoria.e.j@gmail.com</a>
                             </p>
                         </div>
                     </div>
@@ -1737,77 +1197,166 @@
 
             <div class="footer-bottom">
                 <p>© 2024 REAL Consultoria Empresarial & Jurídica. Todos os direitos reservados.</p>
-                <p style="margin-top: 4px; font-size: 12px;">CNPJ: XX.XXX.XXX/XXXX-XX</p>
+                <p style="margin-top: 8px; font-size: 12px;">CNPJ: XX.XXX.XXX/XXXX-XX</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5511974517180?text=Olá!%20Vi%20o%20site%20da%20REAL%20Consultoria%20e%20gostaria%20de%20agendar%20uma%20análise." target="_blank" rel="noopener noreferrer" class="whatsapp-button">
-        <svg class="whatsapp-icon" fill="currentColor" viewBox="0 0 24 24">
+    <a href="https://wa.me/5511974517180?text=Olá!%20Vi%20o%20site%20da%20REAL%20Consultoria%20e%20gostaria%20de%20agendar%20uma%20análise." target="_blank" rel="noopener noreferrer" class="whatsapp-button" id="whatsappBtn">
+        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.486"/>
         </svg>
     </a>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('a[href^="#"]');
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Hero carousel
+        let currentHeroSlide = 0;
+        const heroImages = ['heroImage1', 'heroImage2', 'heroImage3'];
+        
+        function rotateHeroImages() {
+            document.getElementById(heroImages[currentHeroSlide]).style.opacity = '0';
+            currentHeroSlide = (currentHeroSlide + 1) % heroImages.length;
+            document.getElementById(heroImages[currentHeroSlide]).style.opacity = '1';
+        }
+        
+        setInterval(rotateHeroImages, 6000);
+
+        // Services carousel
+        let currentSlide = 0;
+        const totalSlides = 3;
+        
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            if (currentSlide >= totalSlides) currentSlide = 0;
             
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        const headerHeight = document.querySelector('.header').offsetHeight;
-                        const targetPosition = targetSection.offsetTop - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+            const carousel = document.getElementById('servicesCarousel');
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        // Auto-advance services carousel
+        setInterval(() => changeSlide(1), 8000);
+
+        // Animated stats
+        function animateStats() {
+            const stats = [
+                { id: 'stat1', target: 98, suffix: '%' },
+                { id: 'stat2', target: 150, suffix: '+' },
+                { id: 'stat3', target: 15, suffix: '+' },
+                { id: 'stat4', target: 500, suffix: '+' }
+            ];
+            
+            stats.forEach((stat, index) => {
+                setTimeout(() => {
+                    let current = 0;
+                    const increment = stat.target / 60;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= stat.target) {
+                            current = stat.target;
+                            clearInterval(timer);
+                        }
+                        document.getElementById(stat.id).textContent = Math.floor(current) + stat.suffix;
+                    }, 33);
+                }, index * 200);
             });
+        }
+
+        // Testimonials
+        const testimonials = [
+            {
+                image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                text: 'A REAL Consultoria salvou nossa empresa de uma crise que parecia sem solução. O modelo de pagamento por êxito nos deu confiança total no processo.',
+                name: 'Ricardo Silva',
+                company: 'CEO - Indústria Metalúrgica',
+                result: 'Economia de R$ 1.2M em reestruturação'
+            },
+            {
+                image: 'https://images.unsplash.com/photo-1494790108755-2616b612b1b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                text: 'Transparência e competência excepcionais. Resolveram um conflito societário complexo que durava 2 anos em apenas 3 meses.',
+                name: 'Maria Fernanda Costa',
+                company: 'Diretora - Rede de Varejo',
+                result: 'Conflito resolvido em 90 dias'
+            },
+            {
+                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                text: 'O envolvimento direto dos sócios fez toda diferença. Sentimos que éramos a prioridade deles, não apenas mais um cliente.',
+                name: 'João Martins',
+                company: 'Fundador - Startup de Tecnologia',
+                result: 'Estruturação societária completa'
+            }
+        ];
+
+        let currentTestimonial = 0;
+
+        function changeTestimonial(index) {
+            currentTestimonial = index;
+            const testimonial = testimonials[index];
             
-            // Header background on scroll
-            const header = document.querySelector('.header');
+            document.getElementById('testimonialImage').src = testimonial.image;
+            document.getElementById('testimonialText').textContent = `"${testimonial.text}"`;
+            document.getElementById('testimonialName').textContent = testimonial.name;
+            document.getElementById('testimonialCompany').textContent = testimonial.company;
+            document.getElementById('testimonialResult').textContent = testimonial.result;
             
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 100) {
-                    header.style.background = 'rgba(0,0,0,0.98)';
+            // Update dots
+            document.querySelectorAll('.testimonial-dot').forEach((dot, i) => {
+                if (i === index) {
+                    dot.style.background = 'var(--brand-gold)';
+                    dot.classList.add('active');
                 } else {
-                    header.style.background = 'rgba(0,0,0,0.95)';
+                    dot.style.background = 'rgba(245,245,245,0.3)';
+                    dot.classList.remove('active');
                 }
             });
+        }
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            changeTestimonial(currentTestimonial);
+        }, 6000);
+
+        // WhatsApp button visibility
+        window.addEventListener('scroll', function() {
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             
-            // Animation on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe elements for animation
-            const animateElements = document.querySelectorAll('.diferencial-card, .servico-card, .processo-card, .blog-card');
-            animateElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'all 0.6s ease-out';
-                observer.observe(el);
-            });
+            if (scrollPercent > 20) {
+                whatsappBtn.classList.add('visible');
+            } else {
+                whatsappBtn.classList.remove('visible');
+            }
         });
+
+        // Initialize stats animation on scroll
+        let statsAnimated = false;
+        window.addEventListener('scroll', function() {
+            const statsSection = document.querySelector('.stats-section');
+            const rect = statsSection.getBoundingClientRect();
+            
+            if (rect.top < window.innerHeight && !statsAnimated) {
+                animateStats();
+                statsAnimated = true;
+            }
+        });
+
+        // Mobile menu toggle (implement as needed)
+        function toggleMobileMenu() {
+            // Mobile menu implementation
+            console.log('Mobile menu toggled');
+        }
     </script>
 </body>
 </html>

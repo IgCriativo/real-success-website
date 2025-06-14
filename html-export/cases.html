@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cases de Sucesso - REAL Consultoria Empresarial & Jurídica</title>
+    <meta name="description" content="Conheça os cases de sucesso da REAL Consultoria. Histórias reais de empresas que transformaram desafios em oportunidades de crescimento." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Include all CSS from main page here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000000;
+            color: #F5F5F5;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #C5A56A;
+            line-height: 1.2;
+        }
+        
+        :root {
+            --brand-black: #000000;
+            --brand-gold: #C5A56A;
+            --brand-gold-light: #EADCA6;
+            --brand-white: #F5F5F5;
+            --brand-gray: #333333;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+        
+        .logo {
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--brand-gold);
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: var(--brand-white);
+            margin-top: -4px;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        .nav a {
+            color: var(--brand-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover, .nav a.active {
+            color: var(--brand-gold);
+        }
+        
+        .brand-button {
+            background: var(--brand-gold);
+            color: var(--brand-black);
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px -5px rgba(197,165,106,0.3);
+        }
+        
+        .brand-button:hover {
+            background: var(--brand-gold-light);
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            padding: 96px 0;
+        }
+        
+        .section-title {
+            font-size: clamp(36px, 6vw, 64px);
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: rgba(245,245,245,0.8);
+            text-align: center;
+            max-width: 768px;
+            margin: 0 auto 96px;
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            padding-top: 160px;
+            padding-bottom: 64px;
+            background: var(--brand-black);
+        }
+        
+        .cases-section {
+            background: var(--brand-gray);
+        }
+        
+        .case-card {
+            background: var(--brand-black);
+            border-radius: 24px;
+            padding: 48px;
+            margin-bottom: 48px;
+            border: 1px solid rgba(197,165,106,0.2);
+            transition: all 0.5s ease;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(197,165,106,0.25);
+        }
+        
+        .case-header {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        
+        .case-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--brand-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--brand-black);
+            flex-shrink: 0;
+        }
+        
+        .case-info h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .case-info p {
+            color: rgba(245,245,245,0.7);
+            font-size: 16px;
+        }
+        
+        .case-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 32px;
+        }
+        
+        .case-challenge, .case-solution {
+            background: rgba(51,51,51,0.3);
+            padding: 32px;
+            border-radius: 16px;
+        }
+        
+        .case-results {
+            background: rgba(197,165,106,0.1);
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        .result-item {
+            text-align: center;
+        }
+        
+        .result-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--brand-gold);
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            background: var(--brand-gray);
+            padding: 64px 0 32px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 24px;
+            font-size: 18px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(245,245,245,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--brand-gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(245,245,245,0.2);
+            padding-top: 32px;
+            text-align: center;
+            color: rgba(245,245,245,0.6);
+        }
+        
+        .whatsapp-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .case-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .case-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-text">REAL</div>
+                    <div class="logo-subtitle">Consultoria Empresarial & Jurídica</div>
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="cases.html" class="active">Cases de Sucesso</a>
+                    <a href="contato.html">Contato</a>
+                </nav>
+                
+                <div>
+                    <a href="contato.html" class="brand-button">Quero minha Análise</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="section-title">Cases de Sucesso</h1>
+            <p class="section-subtitle">
+                Conheça histórias reais de empresas que transformaram seus desafios em oportunidades 
+                de crescimento com a REAL Consultoria. Resultados comprovados e metodologia única.
+            </p>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="section cases-section">
+        <div class="container">
+            <!-- Case 1 -->
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-icon">🏭</div>
+                    <div class="case-info">
+                        <h3>Indústria Metalúrgica em Crise</h3>
+                        <p>Reestruturação completa salvou empresa familiar de 40 anos</p>
+                        <p><strong>Setor:</strong> Industrial • <strong>Localização:</strong> São Paulo • <strong>Funcionários:</strong> 150</p>
+                    </div>
+                </div>
+                
+                <div class="case-content">
+                    <div class="case-challenge">
+                        <h4 style="color: var(--brand-gold); margin-bottom: 16px;">O Desafio</h4>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Empresa familiar com 40 anos de mercado enfrentando grave crise financeira:
+                        </p>
+                        <ul style="color: rgba(245,245,245,0.8); margin-top: 16px; padding-left: 20px;">
+                            <li>Dívidas acumuladas de R$ 2.8 milhões</li>
+                            <li>Queda de 60% no faturamento</li>
+                            <li>Processos trabalhistas pendentes</li>
+                            <li>Gestão familiar conflituosa</li>
+                            <li>Falta de controles financeiros</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="case-solution">
+                        <h4 style="color: var(--brand-gold); margin-bottom: 16px;">Nossa Solução</h4>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Metodologia R.E.A.L aplicada em 6 meses:
+                        </p>
+                        <ul style="color: rgba(245,245,245,0.8); margin-top: 16px; padding-left: 20px;">
+                            <li>Reestruturação societária e governança</li>
+                            <li>Renegociação estratégica de dívidas</li>
+                            <li>Implementação de controles financeiros</li>
+                            <li>Reorganização de processos produtivos</li>
+                            <li>Capacitação da equipe de gestão</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-results">
+                    <h4 style="color: var(--brand-gold); font-size: 24px; margin-bottom: 24px;">Resultados Alcançados</h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-number">R$ 1.2M</div>
+                            <div style="color: rgba(245,245,245,0.8);">Economia em reestruturação</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">85%</div>
+                            <div style="color: rgba(245,245,245,0.8);">Redução de custos</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">6 meses</div>
+                            <div style="color: rgba(245,245,245,0.8);">Tempo de recuperação</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">40%</div>
+                            <div style="color: rgba(245,245,245,0.8);">Aumento de produtividade</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case 2 -->
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-icon">🛒</div>
+                    <div class="case-info">
+                        <h3>Rede de Varejo - Conflito Societário</h3>
+                        <p>Resolução de conflito entre sócios que durava 2 anos</p>
+                        <p><strong>Setor:</strong> Varejo • <strong>Localização:</strong> Rio de Janeiro • <strong>Lojas:</strong> 12</p>
+                    </div>
+                </div>
+                
+                <div class="case-content">
+                    <div class="case-challenge">
+                        <h4 style="color: var(--brand-gold); margin-bottom: 16px;">O Desafio</h4>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Conflito societário paralisando crescimento da empresa:
+                        </p>
+                        <ul style="color: rgba(245,245,245,0.8); margin-top: 16px; padding-left: 20px;">
+                            <li>Divergências sobre estratégia de expansão</li>
+                            <li>Bloqueio de contas bancárias</li>
+                            <li>Processos judiciais em andamento</li>
+                            <li>Funcionários inseguros com a situação</li>
+                            <li>Perda de oportunidades de negócio</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="case-solution">
+                        <h4 style="color: var(--brand-gold); margin-bottom: 16px;">Nossa Solução</h4>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Abordagem jurídica e empresarial integrada:
+                        </p>
+                        <ul style="color: rgba(245,245,245,0.8); margin-top: 16px; padding-left: 20px;">
+                            <li>Mediação especializada entre sócios</li>
+                            <li>Reestruturação do acordo societário</li>
+                            <li>Definição clara de governança</li>
+                            <li>Acordo de não-concorrência</li>
+                            <li>Plano estratégico conjunto</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-results">
+                    <h4 style="color: var(--brand-gold); font-size: 24px; margin-bottom: 24px;">Resultados Alcançados</h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-number">90 dias</div>
+                            <div style="color: rgba(245,245,245,0.8);">Resolução do conflito</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">R$ 500K</div>
+                            <div style="color: rgba(245,245,245,0.8);">Economia em custos legais</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">3 lojas</div>
+                            <div style="color: rgba(245,245,245,0.8);">Expansão realizada</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">25%</div>
+                            <div style="color: rgba(245,245,245,0.8);">Crescimento no faturamento</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case 3 -->
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-icon">💻</div>
+                    <div class="case-info">
+                        <h3>Startup de Tecnologia - Estruturação</h3>
+                        <p>Preparação para investimento e escalabilidade</p>
+                        <p><strong>Setor:</strong> Tecnologia • <strong>Localização:</strong> São Paulo • <strong>Rodada:</strong> Série A</p>
+                    </div>
+                </div>
+                
+                <div class="case-content">
+                    <div class="case-challenge">
+                        <h4 style="color: var(--brand-gold); margin-bottom: 16px;">O Desafio</h4>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Startup em crescimento precisando se estruturar:
+                        </p>
+                        <ul style="color: rgba(245,245,245,0.8); margin-top: 16px; padding-left: 20px;">
+                            <li>Estrutura societária inadequada</li>
+                            <li>Falta de compliance para investidores</li>
+                            <li>Contratos de trabalho irregulares</li>
+                            <li>Propriedade intelectual desprotegida</li>
+                            <li>Processos financeiros manuais</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="case-solution">
+                        <h4 style="color: var(--brand-gold); margin-bottom: 16px;">Nossa Solução</h4>
+                        <p style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                            Estruturação completa para crescimento:
+                        </p>
+                        <ul style="color: rgba(245,245,245,0.8); margin-top: 16px; padding-left: 20px;">
+                            <li>Reestruturação societária otimizada</li>
+                            <li>Implementação de compliance completo</li>
+                            <li>Regularização trabalhista</li>
+                            <li>Proteção de propriedade intelectual</li>
+                            <li>Automação de processos financeiros</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-results">
+                    <h4 style="color: var(--brand-gold); font-size: 24px; margin-bottom: 24px;">Resultados Alcançados</h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-number">R$ 2M</div>
+                            <div style="color: rgba(245,245,245,0.8);">Investimento captado</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">100%</div>
+                            <div style="color: rgba(245,245,245,0.8);">Compliance implementado</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">4 meses</div>
+                            <div style="color: rgba(245,245,245,0.8);">Tempo de estruturação</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">300%</div>
+                            <div style="color: rgba(245,245,245,0.8);">Crescimento da equipe</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--brand-black); text-align: center;">
+        <div class="container">
+            <h2 class="section-title">Seja o Próximo Case de Sucesso</h2>
+            <p style="font-size: 20px; color: rgba(245,245,245,0.8); max-width: 600px; margin: 0 auto 48px;">
+                Transforme os desafios da sua empresa em oportunidades de crescimento 
+                com nossa metodologia comprovada.
+            </p>
+            <a href="contato.html" class="brand-button" style="font-size: 18px; padding: 24px 48px;">
+                Agendar Análise Estratégica
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div>
+                        <div class="logo-text">REAL</div>
+                        <div class="logo-subtitle">Consultoria Empresarial & Jurídica</div>
+                    </div>
+                    <p style="color: rgba(245,245,245,0.8); margin-top: 16px; line-height: 1.6;">
+                        Soluções empresariais e jurídicas de alto nível com modelo único baseado em êxito. 
+                        Compromisso, transparência e resultados garantidos para seus desafios mais complexos.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="sobre.html">Sobre Nós</a>
+                        <a href="servicos.html">Serviços</a>
+                        <a href="cases.html">Cases de Sucesso</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <div style="color: rgba(245,245,245,0.8); line-height: 1.6;">
+                        <p>
+                            Rua São Benedito, 569 - Sala 01<br>
+                            Centro - Caraguatatuba/SP<br>
+                            CEP 11660-100
+                        </p>
+                        <div style="margin-top: 16px;">
+                            <p>
+                                <span style="color: var(--brand-gold);">Pedro Paulo:</span>
+                                <a href="tel:+5511974517180" style="color: rgba(245,245,245,0.8); text-decoration: none;">(11) 97451-7180</a>
+                            </p>
+                            <p>
+                                <span style="color: var(--brand-gold);">João Pedro:</span>
+                                <a href="tel:+5512996351708" style="color: rgba(245,245,245,0.8); text-decoration: none;">(12) 99635-1708</a>
+                            </p>
+                            <p>
+                                <span style="color: var(--brand-gold);">E-mail:</span>
+                                <a href="mailto:realconsultoria.e.j@gmail.com" style="color: rgba(245,245,245,0.8); text-decoration: none;">realconsultoria.e.j@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 REAL Consultoria Empresarial & Jurídica. Todos os direitos reservados.</p>
+                <p style="margin-top: 8px; font-size: 12px;">CNPJ: XX.XXX.XXX/XXXX-XX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511974517180?text=Olá!%20Vi%20o%20site%20da%20REAL%20Consultoria%20e%20gostaria%20de%20agendar%20uma%20análise." target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.486"/>
+        </svg>
+    </a>
+</body>
+</html>
