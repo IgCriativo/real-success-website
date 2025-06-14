@@ -8,7 +8,8 @@ import TestimonialsSlider from '../components/TestimonialsSlider';
 import ElementorCompatibleCarousel from '../components/ElementorCompatibleCarousel';
 import AnimatedStats from '../components/AnimatedStats';
 import InteractiveTimeline from '../components/InteractiveTimeline';
-import { Clock, CheckCircle, Star } from 'lucide-react';
+import CompetitiveAdvantages from '../components/CompetitiveAdvantages';
+import { Sparkles, CheckCircle, Star, Trophy, Target, Zap } from 'lucide-react';
 
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -33,63 +34,41 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-brand-black">
+      {/* SEO Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "REAL Consultoria Empresarial & Jurídica",
+          "description": "Consultoria empresarial e jurídica especializada em transformar desafios complexos em soluções estratégicas com metodologia única e resultados comprovados.",
+          "url": "https://realconsultoria.com.br",
+          "logo": "https://realconsultoria.com.br/logo.png",
+          "sameAs": [
+            "https://www.linkedin.com/company/real-consultoria",
+            "https://www.instagram.com/realconsultoria"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua São Benedito, 569 - Sala 01",
+            "addressLocality": "Caraguatatuba",
+            "addressRegion": "SP",
+            "postalCode": "11660-100",
+            "addressCountry": "BR"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-97451-7180",
+            "contactType": "customer service"
+          }
+        })}
+      </script>
+
       <Header />
       
       <HeroSection />
 
-      {/* Urgência e Escassez - Redesign Elementor Style */}
-      <section className="py-12 bg-gradient-to-r from-red-900/20 to-brand-black border-t border-red-500/30 fade-on-scroll">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="glass-card p-8 rounded-3xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10" />
-              
-              <div className="relative z-10">
-                <div className="flex items-center justify-center space-x-4 mb-6">
-                  <Clock className="text-red-400 animate-pulse" size={32} />
-                  <h3 className="text-2xl md:text-3xl font-playfair font-bold text-red-400">
-                    ⚠️ ATENÇÃO: Oferta por Tempo Limitado
-                  </h3>
-                </div>
-                
-                <p className="text-xl text-brand-white/90 mb-8 leading-relaxed">
-                  Estamos aceitando apenas <span className="text-brand-gold font-bold">5 novos casos por mês</span> 
-                  para garantir atendimento exclusivo e resultados excepcionais.
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                  <div className="bg-green-900/30 p-4 rounded-xl border border-green-500/30">
-                    <CheckCircle className="text-green-400 mx-auto mb-2" size={24} />
-                    <div className="text-green-400 font-semibold">3 vagas restantes</div>
-                    <div className="text-green-300/70 text-sm">Dezembro 2024</div>
-                  </div>
-                  
-                  <div className="bg-yellow-900/30 p-4 rounded-xl border border-yellow-500/30">
-                    <Clock className="text-yellow-400 mx-auto mb-2" size={24} />
-                    <div className="text-yellow-400 font-semibold">Resposta em 24h</div>
-                    <div className="text-yellow-300/70 text-sm">Garantida</div>
-                  </div>
-                  
-                  <div className="bg-blue-900/30 p-4 rounded-xl border border-blue-500/30">
-                    <Star className="text-blue-400 mx-auto mb-2" size={24} />
-                    <div className="text-blue-400 font-semibold">Análise Gratuita</div>
-                    <div className="text-blue-300/70 text-sm">Sem compromisso</div>
-                  </div>
-                </div>
-                
-                <a
-                  href="/contato"
-                  className="brand-button text-lg px-10 py-4 inline-block shadow-2xl transform hover:scale-105 transition-all duration-300"
-                >
-                  🚀 Reservar Minha Vaga Agora
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CompetitiveAdvantages />
 
-      {/* Novo Carrossel Compatível com Elementor */}
       <ElementorCompatibleCarousel />
 
       <AnimatedStats />
@@ -100,51 +79,75 @@ const Index = () => {
 
       <BlogSection />
 
-      {/* CTA Final Redesenhado */}
+      {/* CTA Final Redesenhado com Foco em Diferenciais */}
       <section className="section-spacing bg-gradient-to-br from-brand-gray to-brand-black fade-on-scroll">
         <div className="container-custom text-center">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-playfair font-bold mb-8">
-              Pronto para Resolver Desafios Complexos com um{' '}
-              <span className="text-gradient">Parceiro de Verdade</span>?
+              Transforme Seu Negócio com{' '}
+              <span className="text-gradient">Estratégias Personalizadas</span>
             </h2>
-            <p className="text-xl text-brand-white/80 mb-12 leading-relaxed">
-              Não deixe seus problemas empresariais e jurídicos sem solução. 
-              Agende sua análise estratégica gratuita e descubra como podemos ajudar.
+            <p className="text-xl text-brand-white/90 mb-16 leading-relaxed max-w-4xl mx-auto">
+              Nossa metodologia exclusiva combina análise profunda, estratégias personalizadas e execução eficiente 
+              para entregar resultados que realmente impactam o crescimento do seu negócio.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="glass-card p-6 rounded-2xl">
-                <div className="text-4xl font-bold text-brand-gold mb-2">100%</div>
-                <div className="text-brand-white/70">Focado em Resultados</div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+              <div className="glass-card p-8 rounded-3xl transform hover:scale-105 transition-all duration-500 group">
+                <div className="text-5xl font-bold text-brand-gold mb-3 group-hover:animate-pulse">360°</div>
+                <div className="text-lg font-semibold text-brand-white mb-2">Visão Completa</div>
+                <div className="text-brand-white/70">Análise integral do seu negócio</div>
               </div>
-              <div className="glass-card p-6 rounded-2xl">
-                <div className="text-4xl font-bold text-brand-gold mb-2">24h</div>
-                <div className="text-brand-white/70">Resposta Garantida</div>
+              <div className="glass-card p-8 rounded-3xl transform hover:scale-105 transition-all duration-500 group">
+                <div className="text-5xl font-bold text-brand-gold mb-3 group-hover:animate-pulse">1:1</div>
+                <div className="text-lg font-semibold text-brand-white mb-2">Atendimento Exclusivo</div>
+                <div className="text-brand-white/70">Dedicação personalizada</div>
               </div>
-              <div className="glass-card p-6 rounded-2xl">
-                <div className="text-4xl font-bold text-brand-gold mb-2">R$ 0</div>
-                <div className="text-brand-white/70">Custo Inicial</div>
+              <div className="glass-card p-8 rounded-3xl transform hover:scale-105 transition-all duration-500 group">
+                <div className="text-5xl font-bold text-brand-gold mb-3 group-hover:animate-pulse">24/7</div>
+                <div className="text-lg font-semibold text-brand-white mb-2">Suporte Contínuo</div>
+                <div className="text-brand-white/70">Acompanhamento integral</div>
+              </div>
+              <div className="glass-card p-8 rounded-3xl transform hover:scale-105 transition-all duration-500 group">
+                <div className="text-5xl font-bold text-brand-gold mb-3 group-hover:animate-pulse">∞</div>
+                <div className="text-lg font-semibold text-brand-white mb-2">Potencial Ilimitado</div>
+                <div className="text-brand-white/70">Crescimento sem limites</div>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center">
               <a
                 href="/contato"
-                className="brand-button text-2xl px-12 py-6 shadow-premium transform hover:scale-105 transition-all duration-300"
+                className="brand-button text-2xl px-16 py-8 shadow-premium transform hover:scale-110 transition-all duration-500 relative overflow-hidden group"
               >
-                🎯 Agendar Análise Estratégica GRATUITA
+                <span className="relative z-10 flex items-center">
+                  <CheckCircle className="mr-3 group-hover:animate-spin" size={28} />
+                  Iniciar Minha Transformação Agora
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-gold-light to-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
               <a
-                href="https://wa.me/5511999999999"
-                className="brand-button-outline text-xl px-10 py-6 transform hover:scale-105 transition-all duration-300"
+                href="https://wa.me/5511974517180"
+                className="brand-button-outline text-xl px-12 py-8 transform hover:scale-110 transition-all duration-500 group"
               >
-                💬 WhatsApp Direto
+                <span className="flex items-center">
+                  💬 Conversar com Especialista
+                </span>
               </a>
+            </div>
+            
+            <div className="mt-12 p-8 glass-card rounded-3xl max-w-4xl mx-auto">
+              <h3 className="text-2xl font-playfair font-bold text-brand-gold mb-4">
+                Garantia de Satisfação Total
+              </h3>
+              <p className="text-brand-white/80 text-lg leading-relaxed">
+                Estamos tão confiantes na nossa metodologia que oferecemos garantia total de satisfação. 
+                Se não ficar completamente satisfeito com os resultados, trabalhamos até que você alcance seus objetivos.
+              </p>
             </div>
             
             <p className="text-brand-white/60 mt-8 text-lg">
-              🔒 Atendimento confidencial • 📞 Sem compromisso • ⏰ Vagas limitadas
+              🔒 Confidencialidade garantida • 📊 Diagnóstico detalhado • ⚡ Implementação rápida
             </p>
           </div>
         </div>
